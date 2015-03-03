@@ -18,3 +18,6 @@
 *xterm*color13: #bb88dd
 *xterm*color14: #4eb4fa
 *xterm*color15: #d0d0d0
+! change font to source code
+xterm*faceName: Source Code Pro, Light:size=10:antialias=true
+xterm*font: 7x13
