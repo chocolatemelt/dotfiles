@@ -15,7 +15,7 @@ prompt walters
 export EDITOR="vim"
 
 # History file and size
-HISTFILE=~/.history
+HISTFILE=~/.zhistory
 SAVEHIST=5000
 HISTSIZE=5000
 
