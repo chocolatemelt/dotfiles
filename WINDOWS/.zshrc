@@ -74,11 +74,31 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
+# History file and size
+HISTFILE=~/.history
+SAVEHIST=5000
+HISTSIZE=5000
+
+# Append history
+setopt APPEND_HISTORY
+
+# Write after each command
+setopt INC_APPEND_HISTORY
+
+# Share history between shells
+setopt SHARE_HISTORY
+
+# Ignore dupes and reduce blanks
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_REDUCE_BLANKS
+
 # Personal stuff
 bindkey -v
 bindkey -M viins 'jj' vi-cmd-mode
 bindkey '^R' history-incremental-search-backward
 
-# Something really stupid happens with oh-my-zsh on windows, and this is a fix (?)
-compinit
-cp .zcompdump .zcompdump-$HOSTNAME-5.0.2
+# aliases
+alias rz='source ~/.zshrc' # shell reload after configuration changes
+alias ez='vim ~/.zshrc' # change this file
+alias 6it='cd /home/zhang/Documents/Git' # go to git directory
