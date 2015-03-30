@@ -22,6 +22,15 @@ inoremap jj <ESC>
 " Fast saving
 nmap <leader>w :w!<cr>
 
+" Powerline support
+set rtp+=/usr/lib/python3.4/site-packages/powerline/bindings/vim/
+
+" Always show statusline
+set laststatus=2
+
+" Use 256 colours (Use this setting only if your terminal supports 256 colours)
+set t_Co=256
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
@@ -135,7 +144,6 @@ set ffs=unix,dos,mac
 set nobackup
 set nowb
 set noswapfile
-set noundofile
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

@@ -10,12 +10,18 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
+# Source powershell config script
+if [[ -r /usr/lib/python3.4/site-packages/powerline/bindings/zsh/powerline.zsh ]]; then
+    source /usr/lib/python3.4/site-packages/powerline/bindings/zsh/powerline.zsh
+fi
+
 # Customize to your needs...
-prompt walters
+# prompt walters
+prompt paradox
 export EDITOR="vim"
 
 # History file and size
-HISTFILE=~/.history
+HISTFILE=~/.zhistory
 SAVEHIST=5000
 HISTSIZE=5000
 
