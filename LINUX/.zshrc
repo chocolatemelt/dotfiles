@@ -45,7 +45,7 @@ bindkey -M viins 'jj' vi-cmd-mode
 bindkey '^R' history-incremental-search-backward
 
 # aliases
-alias windows='sudo mount -t ntfs -o nls=utf8,umask=0222 /dev/sda5 /media/c' # mounts windows
+alias windows='sudo ntfs-3g /dev/sda5 /media/c' # mounts windows (requires ntfs-3g to be installed)
 alias unwindows='sudo umount /media/c' # unmounts windows
 alias syupdate='sudo pacman -Syu' # system upgrade
 alias rz='source ~/.zshrc' # shell reload after configuration changes
