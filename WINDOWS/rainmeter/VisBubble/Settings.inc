@@ -22,7 +22,7 @@
 ; CHANGE PLAYER HERE! http://docs.rainmeter.net/manual/plugins/nowplaying
 ; This is to hide the visualizer when no music player is playing
 Player=iTunes
-HideWhenNotPlaying=1
+HideWhenNotPlaying=0
 ;
 ; The size of the circle
 Radius=200
