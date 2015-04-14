@@ -21,11 +21,11 @@
 [Variables]
 ; CHANGE PLAYER HERE! http://docs.rainmeter.net/manual/plugins/nowplaying
 ; This is to hide the visualizer when no music player is playing
-Player=CAD
-HideWhenNotPlaying=0
+Player=iTunes
+HideWhenNotPlaying=1
 ;
 ; The size of the circle
-Radius=256
+Radius=200
 ;
 ; Color of shapes/lines/bars. ItemColor2 is for MultiLineExtrude
 ItemColor=255,255,255,200
@@ -57,7 +57,7 @@ BackCircleColor=255,255,255,255
 ; ANGLES: In radians, you can also use Rad(<input value in deg>)
 ; NOTE: VALUES ARE ALWAYS CLOCKWISE, STARTING FROM 0 WHICH FACES RIGHT
 ; What angle does the lowest freq start at?
-AngleStart=(Rad(158))
+AngleStart=(Rad(170))
 ; How much angle the items fill, from 0 - 360 in rad.
 AngleTotal=(Rad(220))
 ; Whether the AngleTotal and AngleStart affects the BackCircle, if 0 then circle will always be full
