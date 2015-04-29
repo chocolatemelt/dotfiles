@@ -1,0 +1,11 @@
+{
+	"color_scheme": "Packages/Theme - Brogrammer/brogrammer.tmTheme",
+	"font_face": "Input",
+	"font_size": 10,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"tab_size": 2,
+	"theme": "Brogrammer.sublime-theme"
+}
