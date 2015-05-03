@@ -5,15 +5,15 @@ These are packages and settings for my Sublime Text 3 using Package Control. The
 
 To setup symlink on Windows:
 
-    > cd (your_sublime_root_here)
-    > mklink /D .\Packages "C:\Users\(your_user\github\dropbox\whatever)\Packages
+    > cd (your_sublime_root_here)\Packages
+    > mklink /D .\User "C:\Users\(your_user\github\dropbox\whatever)\User"
 
 Sublime root is probably located in ```%appdata%\Roaming\Sublime Text 3```.
 
 To setup symlink on Linux/OSX:
 
-    $ cd (your_sublime_root_here)
-    $ ln -s (github/dropbox/whatever)/Packages ./Packages
+    $ cd (your_sublime_root_here)/Packages
+    $ ln -s (github/dropbox/whatever)/User ./User
 
 You may want to add a folder called Sublime or something for clarification. Sublime root on Linux/OSX differs by flavor; probably somewhere like ```/usr/share/applications/sublime-text.desktop```.
 
