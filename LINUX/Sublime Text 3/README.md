@@ -16,3 +16,5 @@ To setup symlink on Linux/OSX:
     $ ln -s (github/dropbox/whatever)/Packages ./Packages
 
 You may want to add a folder called Sublime or something for clarification. Sublime root on Linux/OSX differs by flavor; probably somewhere like ```/usr/share/applications/sublime-text.desktop```.
+
+On Arch Linux it is in ```~/.config/sublime-text-3```.
