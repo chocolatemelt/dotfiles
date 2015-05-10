@@ -58,8 +58,8 @@ bindkey '^R' history-incremental-search-backward
 alias windows='sudo ntfs-3g /dev/sda5 /media/c' # mounts windows (requires ntfs-3g to be installed)
 alias unwindows='sudo umount /media/c' # unmounts windows
 alias syupdate='sudo pacman -Syu' # system upgrade
-alias pacro='pacman -Rns $(pacman -Qtdq)' # remove orphaned packages
-alias pacopt='pacman -Sc && pacman-optimize' # delete cache and optimize pacman !make sure packages are stable first!
+alias pacro='sudo pacman -Rns $(pacman -Qtdq)' # remove orphaned packages
+alias pacopt='sudo pacman -Sc && pacman-optimize' # delete cache and optimize pacman !make sure packages are stable first!
 alias rz='source ~/.zshrc' # shell reload after configuration changes
 alias ez='vim ~/.zshrc' # change this file
 alias 6it='cd /home/zhang/Documents/Git' # go to git directory
