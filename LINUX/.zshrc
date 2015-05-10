@@ -63,5 +63,6 @@ alias pacopt='sudo pacman -Sc && pacman-optimize' # delete cache and optimize pa
 alias rz='source ~/.zshrc' # shell reload after configuration changes
 alias ez='vim ~/.zshrc' # change this file
 alias 6it='cd /home/zhang/Documents/Git' # go to git directory
+alias fuck='eval $(thefuck $(fc -ln -1)); history -r' # fuck
 
 # stackoverflow.com/questions/171563/whats-in-your-zshrc
