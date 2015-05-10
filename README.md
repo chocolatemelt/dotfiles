@@ -7,7 +7,7 @@ These are my personal dotfiles for zsh, vim, tmux, etc as well as other UNIX she
 
 ## Systems
 
-* Windows Babun Shell
+* Windows
 * Arch Linux
 
 ## Dotfiles
@@ -17,3 +17,4 @@ These are my personal dotfiles for zsh, vim, tmux, etc as well as other UNIX she
 * vim
 * tmux
 * mintty
+* Sublime Text 3
