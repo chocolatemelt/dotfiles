@@ -55,7 +55,7 @@ bindkey -M viins 'jj' vi-cmd-mode
 bindkey '^R' history-incremental-search-backward
 
 # aliases
-alias windows='sudo ntfs-3g /dev/sda5 /media/c' # mounts windows (requires ntfs-3g to be installed)
+alias windows='sudo ntfs-3g /dev/sda5 /media/c' # mounts window (requires ntfs-3g to be installed)
 alias unwindows='sudo umount /media/c' # unmounts windows
 alias syupdate='sudo pacman -Syu' # system upgrade
 alias pacro='sudo pacman -Rns $(pacman -Qtdq)' # remove orphaned packages
@@ -64,5 +64,6 @@ alias rz='source ~/.zshrc' # shell reload after configuration changes
 alias ez='vim ~/.zshrc' # change this file
 alias 6it='cd /home/zhang/Documents/Git' # go to git directory
 alias fuck='eval $(thefuck $(fc -ln -1)); history -r' # fuck
+alias epitaph='journalctl -p 0..3 -xn' # shows critical system messages via journalctl
 
 # stackoverflow.com/questions/171563/whats-in-your-zshrc
