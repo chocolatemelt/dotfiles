@@ -35,6 +35,7 @@
 			{ "command": "side_bar_folders_load", "args":{ "index": 4, "append": true }},
 			{ "command": "side_bar_folders_load", "args":{ "index": 5, "append": true }},
 			{ "caption": "-" , "id": "options" },
+			{ "command": "side_bar_folders_audit_all", "caption": "Clear Missing Folders"},
 			{ "caption": "-" , "id": "end" }
 		]
 	}

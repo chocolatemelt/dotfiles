@@ -4,6 +4,7 @@
 	],
 	"installed_packages":
 	[
+		"BinaryPlist",
 		"Package Control",
 		"SideBarEnhancements",
 		"SideBarFolders",
