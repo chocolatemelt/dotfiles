@@ -8,6 +8,9 @@
 			"path": "C:\\Users\\kzhaa_000\\Documents\\GitHub\\Toy-Engine"
 		},
 		{
+			"path": "C:\\Users\\kzhaa_000\\Documents\\GitHub\\tddnc"
+		},
+		{
 			"path": "C:\\Users\\kzhaa_000\\Documents\\GitHub\\dotfiles"
 		},
 		{
@@ -20,5 +23,5 @@
 			"path": "C:\\Users\\kzhaa_000\\Documents\\GitHub"
 		}
 	],
-	"swap_append_load": true
+	"swap_append_load": false
 }
