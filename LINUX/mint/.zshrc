@@ -19,6 +19,7 @@ fi
 # prompt paradox (powerline theme)
 prompt paradox
 export EDITOR="vim"
+# export TERM=xterm-256color
 
 # colored less output
 export LESS=-R
