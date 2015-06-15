@@ -64,5 +64,6 @@ alias syupdate='sudo apt-get update && sudo apt-get upgrade' # update system
 alias sysclean='sudo apt-get autoremove' # exactly what it says it does
 alias FUCK='fuck' # for mondays
 alias startrandr='xrandr --auto --output eDP1 --mode 1920x1080 --right-of DP2' # dual monitor setup @ work
+alias endrandr='xrandr -s 0' # reset xrandr
 
 # stackoverflow.com/questions/171563/whats-in-your-zshrc
