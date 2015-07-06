@@ -15,7 +15,6 @@ if [[ -r /usr/lib/python3.4/site-packages/powerline/bindings/zsh/powerline.zsh ]
     source /usr/lib/python3.4/site-packages/powerline/bindings/zsh/powerline.zsh
 fi
 
-# Customize to your needs...
 # prompt paradox (powerline theme)
 prompt paradox
 export EDITOR="vim"
@@ -65,5 +64,8 @@ alias ez='vim ~/.zshrc' # change this file
 alias 6it='cd /home/zhang/Documents/Git' # go to git directory
 alias fuck='eval $(thefuck $(fc -ln -1)); history -r' # fuck
 alias epitaph='journalctl -p 0..3 -xn' # shows critical system messages via journalctl
+
+# print out the arch sysinfo for fun
+alsi -a
 
 # stackoverflow.com/questions/171563/whats-in-your-zshrc
