@@ -19,6 +19,8 @@ fi
 prompt paradox
 export EDITOR="vim"
 
+export PATH=$PATH:.
+
 # colored less output
 export LESS=-R
 export LESS_TERMCAP_me=$(printf '\e[0m')
