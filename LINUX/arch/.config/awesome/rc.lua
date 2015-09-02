@@ -82,14 +82,14 @@ local layouts = {
     awful.layout.suit.fair.horizontal,
     awful.layout.suit.spiral,
     awful.layout.suit.spiral.dwindle,
-    awful.layout.suit.max,
+    awful.layout.suit.max
 }
 -- }}}
 
 -- {{{ Tags
 tags = {
-   names = { "web", "term", "docs", "media", "files", "other" },
-   layout = { layouts[1], layouts[3], layouts[4], layouts[1], layouts[7], layouts[1] }
+   names = { "www", "term", "docs", "media", "irc" },
+   layout = { layouts[1], layouts[6], layouts[2], layouts[1], layouts[2] }
 }
 for s = 1, screen.count() do
 -- Each screen has its own tag table.
