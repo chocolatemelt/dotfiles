@@ -50,7 +50,6 @@ end
 
 awful.util.spawn_with_shell("xfce4-power-manager")
 awful.util.spawn_with_shell("numlockx")
-awful.util.spawn_with_shell("xmodmap ~/.Xmodmap")
 awful.util.spawn_with_shell("gtg")
 -- }}}
 
