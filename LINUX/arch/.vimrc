@@ -25,6 +25,9 @@ nmap <leader>w :w!<cr>
 " Powerline support
 set rtp+=/usr/lib/python3.4/site-packages/powerline/bindings/vim/
 
+" fzf support
+set rtp+=~/.fzf
+
 " Always show statusline
 set laststatus=2
 

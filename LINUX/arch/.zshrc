@@ -15,6 +15,9 @@ if [[ -r /usr/lib/python3.4/site-packages/powerline/bindings/zsh/powerline.zsh ]
     source /usr/lib/python3.4/site-packages/powerline/bindings/zsh/powerline.zsh
 fi
 
+# Source fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 # prompt paradox (powerline theme)
 prompt paradox
 export EDITOR="vim"
