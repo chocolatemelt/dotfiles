@@ -66,7 +66,7 @@ editor     = os.getenv("EDITOR") or "vim" or "nano"
 editor_cmd = terminal .. " -e " .. editor
 
 -- user defined
-browser    = "chromium"
+browser    = "google-chrome-stable"
 browser2   = "firefox"
 gui_editor = "gedit"
 graphics   = "gimp"

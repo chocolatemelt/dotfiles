@@ -68,6 +68,8 @@ alias rz='source ~/.zshrc' # shell reload after configuration changes
 alias ez='vim ~/.zshrc' # change this file
 alias 6it='cd /home/zhang/Documents/Git' # go to git directory
 alias fuck='eval $(thefuck $(fc -ln -1)); history -r' # fuck
+alias FUCK='fuck' # mondays ...
+alias google-chrome='google-chrome-stable'
 alias epitaph='journalctl -p 0..3 -xn' # shows critical system messages via journalctl
 
 # print out the arch sysinfo for fun
