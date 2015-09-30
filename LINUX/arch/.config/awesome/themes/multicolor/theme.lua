@@ -11,7 +11,7 @@ theme                               = {}
 theme.confdir                       = os.getenv("HOME") .. "/.config/awesome/themes/multicolor"
 theme.wallpaper                     = theme.confdir .. "/wall.png"
 
-theme.font                          = "Terminus 8"
+theme.font                          = "Ricty 10"
 theme.useless_gap_width							= 10
 theme.menu_bg_normal                = "#000000"
 theme.menu_bg_focus                 = "#000000"
