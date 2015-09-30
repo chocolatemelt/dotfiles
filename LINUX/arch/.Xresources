@@ -21,5 +21,6 @@
 ! terminal fonts
 ! xterm*faceName: Source Code Pro for Powerline, Light:size=10:antialias=true
 xterm*faceName: DejaVu Sans Mono for Powerline, Book:size=11:antialias=true
+xterm*faceNameDoublesize: Ricty:size=11:antialias=true
 ! xterm*faceName: Fira Mono for Powerline:size=11:antialias=true
 xterm*font: 7x13
