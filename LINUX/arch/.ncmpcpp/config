@@ -190,8 +190,8 @@ visualizer_fifo_path = "/tmp/mpd.fifo"
 
 visualizer_output_name = "FIFO"
 
-visualizer_sync_interval = "1"
+visualizer_sync_interval = "15"
 
-visualizer_type = "spectrum"
+visualizer_type = "wave"
 
-visualizer_look = "hi"
+visualizer_look = "ォォ"
