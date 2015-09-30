@@ -50,7 +50,6 @@ end
 
 awful.util.spawn_with_shell("xfce4-power-manager")
 awful.util.spawn_with_shell("numlockx")
-awful.util.spawn_with_shell("gtg")
 -- }}}
 
 -- {{{ Variable definitions
@@ -61,7 +60,7 @@ beautiful.init(os.getenv("HOME") .. "/.config/awesome/themes/multicolor/theme.lu
 -- common
 modkey     = "Mod4"
 altkey     = "Mod1"
-terminal   = "xterm"
+terminal   = "urxvt"
 editor     = os.getenv("EDITOR") or "vim" or "nano"
 editor_cmd = terminal .. " -e " .. editor
 
