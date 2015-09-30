@@ -74,11 +74,11 @@ mail       = terminal .. " -e mutt "
 
 local layouts = {
     awful.layout.suit.floating,
-    awful.layout.suit.tile,
+    lain.layout.uselesstile,
     awful.layout.suit.tile.left,
     awful.layout.suit.tile.bottom,
     awful.layout.suit.tile.top,
-    awful.layout.suit.fair,
+    lain.layout.uselessfair,
     awful.layout.suit.fair.horizontal,
     awful.layout.suit.spiral,
     awful.layout.suit.spiral.dwindle,
