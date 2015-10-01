@@ -14,7 +14,7 @@ These are my personal dotfiles for zsh, vim, tmux, etc as well as other UNIX she
 ## Dotfiles
 * zsh+oh-my-zsh (babun@windows)
 * zsh+prezto (linux distros)
-* xterm
+* urxvt
 * vim
 * tmux
 * mintty
