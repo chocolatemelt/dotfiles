@@ -1,7 +1,7 @@
 Transparency=low
 OpaqueWhenFocused=no
-Font=@Ricty
+Font=Migu 1M
 BackgroundColour=21,22,26
 Scrollbar=none
 FontHeight=10
-FontSmoothing=partial
+FontSmoothing=default
