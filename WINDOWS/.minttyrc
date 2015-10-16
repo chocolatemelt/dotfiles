@@ -1,5 +1,7 @@
 Transparency=low
 OpaqueWhenFocused=no
-Font=Anonymous Pro
+Font=Migu 1M
 BackgroundColour=21,22,26
-Scrollbar=0
+Scrollbar=none
+FontHeight=10
+FontSmoothing=default
