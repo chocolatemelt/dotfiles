@@ -24,6 +24,9 @@ export EDITOR="vim"
 
 export PATH=$PATH:.
 
+# remove ssh askpass
+unset SSH_ASKPASS
+
 # colored less output
 export LESS=-R
 export LESS_TERMCAP_me=$(printf '\e[0m')
@@ -59,6 +62,7 @@ bindkey -M viins 'jj' vi-cmd-mode
 bindkey '^R' history-incremental-search-backward
 
 # aliases
+alias vi='vim' # v(im)
 alias windows='sudo ntfs-3g /dev/sda5 /media/c' # mounts window (requires ntfs-3g to be installed)
 alias unwindows='sudo umount /media/c' # unmounts windows
 alias syupdate='sudo pacman -Syu' # system upgrade

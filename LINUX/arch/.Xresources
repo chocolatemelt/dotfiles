@@ -1,6 +1,6 @@
 ! rxvt
 URxvt*scrollBar: false
-URxvt*mouseWheelScrollPage: true
+URxvt*mouseWheelScrollPage: false
 
 ! Molokai theme
 URxvt*background: #1d1f24

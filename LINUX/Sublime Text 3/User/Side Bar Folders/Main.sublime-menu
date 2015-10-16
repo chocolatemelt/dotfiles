@@ -25,6 +25,7 @@
 			{ "caption": "-" , "id": "options-separator" },
 			{ "command": "side_bar_folders_load", "args":{ "index": 0 }},
 			{ "caption": "-" , "id": "options" },
+			{ "command": "side_bar_folders_audit_all", "caption": "Clear Missing Folders"},
 			{ "caption": "-" , "id": "end" }
 		]
 	}
