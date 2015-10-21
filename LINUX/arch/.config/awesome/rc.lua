@@ -87,8 +87,8 @@ local layouts = {
 
 -- {{{ Tags
 tags = {
-   names = {"一", "二", "三", "四", "五", "六", "七", "八", "九", "十"},
-   layout = { layouts[1], layouts[6], layouts[2], layouts[1], layouts[2], layouts[2], layouts[2], layouts[2], layouts[2], layouts[2] }
+   names = { "一", "二", "三", "四", "五", "六", "七", "八", "九" },
+   layout = { layouts[1], layouts[6], layouts[2], layouts[1], layouts[2], layouts[2], layouts[2], layouts[2], layouts[2] }
 }
 for s = 1, screen.count() do
 -- Each screen has its own tag table.
@@ -512,26 +512,20 @@ globalkeys = awful.util.table.join(
     -- ALSA volume control
     awful.key({ altkey }, "Up",
         function ()
-            os.execute(string.format("amixer -c %s set %s 1+", volumewidget.card, volumewidget.channel))
+            os.execute("amixer -q sset Master 2%+")
             volumewidget.update()
         end),
     awful.key({ altkey }, "Down",
         function ()
-            os.execute(string.format("amixer -c %s set %s 1-", volumewidget.card, volumewidget.channel))
+            os.execute("amixer -q sset Master 2%-")
             volumewidget.update()
         end),
     awful.key({ altkey }, "m",
         function ()
-            os.execute(string.format("amixer -c %s set %s toggle", volumewidget.card, volumewidget.channel))
-            --os.execute(string.format("amixer set %s toggle", volumewidget.channel))
+            os.execute("amixer -q sset Master toggle")
             volumewidget.update()
         end),
-    awful.key({ altkey, "Control" }, "m",
-        function ()
-            os.execute(string.format("amixer -c %s set %s 100%%", volumewidget.card, volumewidget.channel))
-            volumewidget.update()
-        end),
-
+ 
     -- MPD control
     awful.key({ altkey, "Control" }, "Up",
         function ()
