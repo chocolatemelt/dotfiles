@@ -88,7 +88,7 @@ local layouts = {
 -- {{{ Tags
 tags = {
    names = { "一", "二", "三", "四", "五", "六", "七", "八", "九" },
-   layout = { layouts[1], layouts[6], layouts[2], layouts[1], layouts[2], layouts[2], layouts[2], layouts[2], layouts[2] }
+   layout = { layouts[1], layouts[6], layouts[7], layouts[6], layouts[6], layouts[6], layouts[6], layouts[6], layouts[6] }
 }
 for s = 1, screen.count() do
 -- Each screen has its own tag table.
@@ -274,7 +274,7 @@ spacer = wibox.widget.textbox(" ")
 mywibox = {}
 mybottomwibox = {}
 mypromptbox = {}
-mylayoutbox = {}
+-- mylayoutbox = {}
 mytaglist = {}
 mytaglist.buttons = awful.util.table.join(
                     awful.button({ }, 1, awful.tag.viewonly),
@@ -325,13 +325,14 @@ for s = 1, screen.count() do
     mypromptbox[s] = awful.widget.prompt()
 
 
-    -- We need one layoutbox per screen.
-    mylayoutbox[s] = awful.widget.layoutbox(s)
-    mylayoutbox[s]:buttons(awful.util.table.join(
-                            awful.button({ }, 1, function () awful.layout.inc(layouts, 1) end),
-                            awful.button({ }, 3, function () awful.layout.inc(layouts, -1) end),
-                            awful.button({ }, 4, function () awful.layout.inc(layouts, 1) end),
-                            awful.button({ }, 5, function () awful.layout.inc(layouts, -1) end)))
+    -- We need one layoutbox per screen. doesn't work =( {{
+    -- mylayoutbox[s] = awful.widget.layoutbox(s)
+    -- mylayoutbox[s]:buttons(awful.util.table.join(
+    --                         awful.button({ }, 1, function () awful.layout.inc(layouts, 1) end),
+    --                         awful.button({ }, 3, function () awful.layout.inc(layouts, -1) end),
+    --                         awful.button({ }, 4, function () awful.layout.inc(layouts, 1) end),
+    --                         awful.button({ }, 5, function () awful.layout.inc(layouts, -1) end)))
+		-- }}
 
     -- Create a taglist widget
     mytaglist[s] = awful.widget.taglist(s, awful.widget.taglist.filter.all, mytaglist.buttons)
@@ -393,7 +394,7 @@ for s = 1, screen.count() do
 
     -- Widgets that are aligned to the bottom right
     bottom_right_layout = wibox.layout.fixed.horizontal()
-    bottom_right_layout:add(mylayoutbox[s])
+    -- bottom_right_layout:add(mylayoutbox[s])
 
     -- Now bring it all together (with the tasklist in the middle)
     bottom_layout = wibox.layout.align.horizontal()
