@@ -10,7 +10,8 @@ local debug  = require("debug")
 
 local capi   = { timer = timer }
 local io     = { open  = io.open,
-                 lines = io.lines }
+                 lines = io.lines,
+                 popen = io.popen }
 local rawget = rawget
 
 -- Lain helper functions for internal use
@@ -43,12 +44,12 @@ function helpers.file_exists(file)
   return f ~= nil
 end
 
--- get all lines from a file, returns an empty 
+-- get all lines from a file, returns an empty
 -- list/table if the file does not exist
 function helpers.lines_from(file)
   if not helpers.file_exists(file) then return {} end
   lines = {}
-  for line in io.lines(file) do 
+  for line in io.lines(file) do
     lines[#lines + 1] = line
   end
   return lines
@@ -64,7 +65,7 @@ end
 -- returns nil otherwise
 function helpers.first_nonempty_line(file)
   for k,v in pairs(helpers.lines_from(file)) do
-    if #v then return v end 
+    if #v then return v end
   end
   return nil
 end
@@ -82,6 +83,18 @@ function helpers.newtimer(name, timeout, fun, nostart)
     if not nostart then
         helpers.timer_table[name]:emit_signal("timeout")
     end
+end
+
+-- }}}
+
+-- {{{ Pipe operations
+
+-- read the full output of a pipe (command)
+function helpers.read_pipe(cmd)
+   local f = assert(io.popen(cmd))
+   local output = f:read("*all")
+   f:close()
+   return output
 end
 
 -- }}}
