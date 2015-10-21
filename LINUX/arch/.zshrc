@@ -24,9 +24,6 @@ export EDITOR="vim"
 
 export PATH=$PATH:.
 
-# remove ssh askpass
-unset SSH_ASKPASS
-
 # colored less output
 export LESS=-R
 export LESS_TERMCAP_me=$(printf '\e[0m')
@@ -63,18 +60,28 @@ bindkey '^R' history-incremental-search-backward
 
 # aliases
 alias vi='vim' # v(im)
+alias 6it='cd /home/zhang/Documents/Git' # go to git directory
+
 alias windows='sudo ntfs-3g /dev/sda5 /media/c' # mounts window (requires ntfs-3g to be installed)
 alias unwindows='sudo umount /media/c' # unmounts windows
+
 alias syupdate='sudo pacman -Syu' # system upgrade
 alias pacro='sudo pacman -Rns $(pacman -Qtdq)' # remove orphaned packages
 alias pacopt='sudo pacman -Sc && sudo pacman-optimize && sync' # delete cache and optimize pacman !make sure packages are stable first!
-alias rz='source ~/.zshrc' # shell reload after configuration changes
-alias ez='vim ~/.zshrc' # change this file
-alias 6it='cd /home/zhang/Documents/Git' # go to git directory
-alias fuck='eval $(thefuck $(fc -ln -1)); history -r' # fuck
-alias FUCK='fuck' # mondays ...
-alias google-chrome='google-chrome-stable'
 alias epitaph='journalctl -p 0..3 -xn' # shows critical system messages via journalctl
+
+alias ez='vim ~/.zshrc' # change this file
+alias rz='source ~/.zshrc' # shell reload after configuration changes
+alias ex='vim ~/.Xresources' # edit x stuff
+alias rx='xrdb ~/.Xresources' # reload x stuff
+alias ea='vim ~/.config/awesome/rc.lua' # edit awesome
+alias ev='vim ~/.vimrc' # edit vim
+
+alias fuck='eval $(thefuck $(fc -ln -1)); history -r' # fuck
+alias FUCK='fuck' # mondays
+
+alias google-chrome='google-chrome-stable'
+alias chrome='google-chrome'
 
 # print out the arch sysinfo for fun
 alsi -a
