@@ -1,4 +1,26 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Vundle
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set nocompatible
+filetype off
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" YouCompleteMe
+Plugin 'Valloric/YouCompleteMe'
+
+" Themes
+Plugin 'crusoexia/vim-monokai'
+
+call vundle#end()
+filetype plugin indent on
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Sets how many lines of history VIM has to remember
@@ -121,7 +143,8 @@ set tm=500
 syntax enable 
 
 try
-    colorscheme badwolf
+    " colorscheme badwolf
+		colorscheme monokai
 catch
 endtry
 
