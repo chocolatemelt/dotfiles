@@ -14,6 +14,10 @@ Plugin 'VundleVim/Vundle.vim'
 " IDE emulation
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-fugitive'
+
+" Quality of life
+Plugin 'tpope/vim-surround'
 
 " Misc. stuff
 Plugin 'ntpeters/vim-better-whitespace'
@@ -25,6 +29,7 @@ Plugin 'crusoexia/vim-monokai'
 
 call vundle#end()
 filetype plugin indent on
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
@@ -64,7 +69,8 @@ set t_Co=256
 " Save files as sudo when I forget to start vim as root
 cmap w!! w !sudo tee > /dev/null %
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Set 7 lines to the cursor - when moving vertically using j/k
@@ -213,9 +219,6 @@ map <C-l> <C-W>l
 
 " Close the current buffer
 map <leader>bd :Bclose<cr>
-
-" Close all the buffers
-map <leader>ba :1,1000 bd!<cr>
 
 " Useful mappings for managing tabs
 map <leader>tn :tabnew<cr>
