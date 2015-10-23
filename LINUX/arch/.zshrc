@@ -84,6 +84,7 @@ alias google-chrome='google-chrome-stable'
 alias chrome='google-chrome'
 
 # print out the arch sysinfo for fun
-alsi -a
+alias alsi='alsi -a'
+alsi
 
 # stackoverflow.com/questions/171563/whats-in-your-zshrc
