@@ -27,6 +27,9 @@ Plugin 'tpope/vim-eunuch'
 " Themes
 Plugin 'crusoexia/vim-monokai'
 
+" Stop confirmation for C-family languages
+let g:ycm_confirm_extra_conf = 0
+
 call vundle#end()
 filetype plugin indent on
 
