@@ -80,6 +80,7 @@ alias ev='vim ~/.vimrc' # edit vim
 alias fuck='eval $(thefuck $(fc -ln -1)); history -r' # fuck
 alias FUCK='fuck' # mondays
 
+alias subl='subl3'
 alias google-chrome='google-chrome-stable'
 alias chrome='google-chrome'
 
