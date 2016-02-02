@@ -1,0 +1,31 @@
+{
+   "background": {
+      "scripts": [ "lib/udeferred.js", "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "img/apng-logo-19-off.png",
+      "default_popup": "popup.html",
+      "default_title": "APNG for Chrome/Opera/WebKit/Blink"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "css": [ "content.css" ],
+      "js": [ "lib/udeferred.js", "lib/crc32.js", "lib/apng-parser.js", "stop-list.js", "content.js" ],
+      "matches": [ "\u003Call_urls>" ]
+   } ],
+   "content_security_policy": "script-src 'self' https://ajax.googleapis.com; object-src 'self'",
+   "description": "Animated PNG support for WebKit/Blink browsers",
+   "icons": {
+      "128": "img/logo128.png",
+      "16": "img/logo16.png",
+      "48": "img/logo48.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC0Sfay82cV58CTLQmVDV23s5z9xwrUN0dva4K01jsuZjMBA5DdExnmEfNWADv0i2Zu5Jk9uvRUaloKaf6uME5ZFc2qSnQDWklPfColIzFMqxib0dCQoqHksM2thEk9ZFyOQezltbXWpXsG3gxUld4izYL8vFQHXP9LCoHrlJTfBQIDAQAB",
+   "manifest_version": 2,
+   "name": "APNG",
+   "options_page": "options.html",
+   "permissions": [ "\u003Call_urls>", "tabs", "webRequest", "contextMenus" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2.1.5",
+   "web_accessible_resources": [ "img/transp.png", "img/apng-logo-19-off.png", "img/apng-logo-19-on.png" ]
+}

@@ -1,0 +1,18 @@
+{
+   "content_scripts": [ {
+      "js": [ "src/inject/imgur.js" ],
+      "matches": [ "*://i.imgur.com/*" ],
+      "run_at": "document_start"
+   }, {
+      "js": [ "src/inject/gfycat.js" ],
+      "matches": [ "*://giant.gfycat.com/*.gif" ],
+      "run_at": "document_start"
+   } ],
+   "description": "instant redirection of gifs to the much faster HTML Video format. Currently supports imgur and gfycat",
+   "homepage_url": "https://github.com/discountrobot/imgur-gif-to-gifv",
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqQ8KAEy6CMRNetrx9aqgXrf9GenEdvocLyw6xWN/LPt7KG3GEBW8hpMEI3mr3E/5qLItLbtwUu7RgGLijzwAdAac6tZAOph2BbbQ0hmeDzy28ToY6cmrxFD/JzBWL6Zp2SzOcWqDuP0PfVDngN3bvL16ufjiHLBEu3fJg8VBeqcR+ezjocj03lxHNjvOeJmncm8hQXSgsdbya+HkITGpl8cxyueD6ixfWGHLRVc+cQ1aB2O5E6Fha0ZAnBQUHxVaYrd1skSEl2GPfO97d/Wc0DHXX+kELA7Og/IyP8LB+MxMkkhkbw837RGmUMBkKWVl+U2J4GJ2QDX44pSy9grOgwIDAQAB",
+   "manifest_version": 2,
+   "name": "IMGUR gif to gifv",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.0.2"
+}

@@ -48,7 +48,6 @@ function run_once(cmd)
   awful.util.spawn_with_shell("pgrep -u $USER -x " .. findme .. " > /dev/null || (" .. cmd .. ")")
 end
 
-awful.util.spawn_with_shell("xfce4-power-manager")
 awful.util.spawn_with_shell("numlockx")
 -- }}}
 
@@ -529,7 +528,7 @@ globalkeys = awful.util.table.join(
             os.execute("amixer -q sset Master toggle")
             volumewidget.update()
         end),
- 
+
     -- MPD control
     awful.key({ altkey, "Control" }, "Up",
         function ()
