@@ -89,7 +89,7 @@ alias chrome='google-chrome'
 pb () { curl -sF "c=@${1:--}" -w "%{redirect_url}" 'https://ptpb.pw/?r=1' -o /dev/stderr | xsel -l /dev/null -b }
 # ptpb.pw - screenshot and copy to clipboard buffer
 pbs () {
-	gm import -window ${1:-root} /tmp/$$.png
+	\gm import -window ${1:-root} /tmp/$$.png
 	pb /tmp/$$.png
 }
 
