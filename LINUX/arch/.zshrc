@@ -22,6 +22,9 @@ fi
 prompt paradox
 export EDITOR="vim"
 
+# eclipse (most likely only for this semester)
+export PATH=$PATH:/usr/local/jdk1.7.0_79/bin
+export PATH=$PATH:/usr/local/eclipse
 export PATH=$PATH:.
 
 # colored less output
@@ -78,10 +81,6 @@ alias rx='xrdb ~/.Xresources' # reload x stuff
 alias ea='vim ~/.config/awesome/rc.lua' # edit awesome
 alias ev='vim ~/.vimrc' # edit vim
 
-alias fuck='eval $(thefuck $(fc -ln -1)); history -r' # fuck
-alias FUCK='fuck' # mondays
-
-alias subl='subl3'
 alias google-chrome='google-chrome-stable'
 alias chrome='google-chrome'
 
