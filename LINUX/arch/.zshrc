@@ -22,9 +22,7 @@ fi
 prompt paradox
 export EDITOR="vim"
 
-# eclipse (most likely only for this semester)
 export PATH=$PATH:/usr/local/jdk1.7.0_79/bin
-export PATH=$PATH:/usr/local/eclipse
 export PATH=$PATH:.
 
 # colored less output
