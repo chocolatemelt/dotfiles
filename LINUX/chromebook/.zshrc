@@ -25,6 +25,10 @@ source $HOME/.dynamic-colors/completions/dynamic-colors.zsh
 prompt paradox
 export EDITOR="vim"
 
+# jdk
+export JAVA_HOME=/usr/share/jdk1.7.0_79
+export PATH=$PATH:$JAVA_HOME/bin
+
 # dynamic-colors
 export PATH=$PATH:.
 export PATH=$HOME/.dynamic-colors/bin:$PATH
