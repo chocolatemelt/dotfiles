@@ -67,6 +67,9 @@ alias rpi='cd /home/zhang/Documents/RPI'
 alias windows='sudo ntfs-3g /dev/sda4 /media/c' # mounts window (requires ntfs-3g to be installed)
 alias unwindows='sudo umount /media/c' # unmounts windows
 
+alias cgate='sudo ntfs-3g /dev/sdb1 /media/d' # mounts 2tb seagate
+alias uncgate='sudo umount /media/d' # unmounts d drive
+
 alias syupdate='sudo pacman -Syu' # system upgrade
 alias pacro='sudo pacman -Rns $(pacman -Qtdq)' # remove orphaned packages
 alias pacopt='sudo pacman -Sc && sudo pacman-optimize && sync' # delete cache and optimize pacman !make sure packages are stable first!
