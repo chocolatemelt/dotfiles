@@ -34,7 +34,7 @@ local function worker(args)
     local password    = args.password or ""
     local host        = args.host or "127.0.0.1"
     local port        = args.port or "6600"
-    local music_dir   = "/media/c/Users/Kevin/Music" or args.music_dir
+    local music_dir   = "/media/d/Music" or args.music_dir
     local cover_size  = args.cover_size or 100
     local default_art = args.default_art or ""
     local followmouse = args.followmouse or false
