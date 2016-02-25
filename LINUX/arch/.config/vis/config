@@ -1,5 +1,5 @@
 ##Refresh rate of the visualizers. A really high refresh rate may cause screen tearing. Default is 20.
-#visualizer.fps=20
+visualizer.fps=30
 
 ##Sets the audio sources to use. Currently available ones are "mpd" and "alsa"Sets the audio sources to use.
 ##Currently available ones are "mpd" and "alsa". Defaults to "mpd".
@@ -18,7 +18,7 @@
 #audio.stereo.enabled=false
 
 ##Specifies how often the visualizer will change in seconds. 0 means do not rotate. Default is 0.
-#visualizer.rotation.secs=10
+#visualizer.rotation.secs=1
 
 ##Configures the samples rate and the cutoff frequencies.
 #audio.sampling.frequency=44100
@@ -33,31 +33,31 @@
 
 ##Configures what character the spectrum visualizer will use. Specifying a space (e.g " ") means the
 ##background will be colored instead of the character. Defaults to " ".
-#visualizer.spectrum.character=#
+visualizer.spectrum.character=*
 
 ##Spectrum bar width. Defaults to 1.
-#visualizer.spectrum.bar.width=2
+visualizer.spectrum.bar.width=1
 
 ##The amount of space between each bar in the spectrum visualizer. Defaults to 1. It's possible to set this to
 ##zero to have no space between bars
 #visualizer.spectrum.bar.spacing=1
 
 ##Available smoothing options are monstercat, sgs, none.
-#visualizer.spectrum.smoothing.mode=monstercat
+visualizer.spectrum.smoothing.mode=monstercat
 
 ##This configures the falloff effect on the spectrum visualizer. Available falloff options are fill,top,none.
 ##Defaults to "fill"
-#visualizer.spectrum.falloff.mode=fill
+visualizer.spectrum.falloff.mode=fill
 
 ##Configures how fast the falloff character falls. This is an exponential falloff so values usually look
 ##best 0.9+ and small changes in this value can have a large effect. Defaults to 0.95
 #visualizer.spectrum.falloff.weight=0.95
 
 ##Margins in percent of total screen for spectrum visualizer. All margins default to 0
-#visualizer.spectrum.top.margin=0.30
-#visualizer.spectrum.bottom.margin=0.10
-#visualizer.spectrum.right.margin=0.10
-#visualizer.spectrum.left.margin=0.10
+visualizer.spectrum.top.margin=0
+visualizer.spectrum.bottom.margin=0
+visualizer.spectrum.right.margin=0
+visualizer.spectrum.left.margin=0
 
 ##Reverses the direction of the spectrum so that high freqs are first and low freqs last. Defaults to false.
 #visualizer.spectrum.reversed=false
