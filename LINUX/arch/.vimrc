@@ -27,11 +27,14 @@ Plugin 'tpope/vim-eunuch'
 
 " Themes
 Plugin 'crusoexia/vim-monokai'
+Plugin 'vim-airline/vim-airline-themes'
 
 " Stop confirmation for C-family languages
 let g:ycm_confirm_extra_conf = 0
 
+" Airline configuration
 let g:airline_powerline_fonts = 1
+let g:airline_theme='wombat'
 
 call vundle#end()
 filetype plugin indent on
@@ -87,6 +90,9 @@ set number
 
 " Show command in bottom bar
 set showcmd
+
+" Hide statusline because we're using airline
+set noshowmode
 
 " Turn on the WiLd menu
 set wildmenu
@@ -156,6 +162,10 @@ syntax enable
 " Cohesive color scheme with terminal
 colorscheme monokai
 set background=dark
+
+" Highlight line number
+highlight CursorLine cterm=NONE ctermbg=NONE ctermfg=NONE guibg=NONE guifg=NONE
+set cursorline
 
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
