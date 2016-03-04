@@ -18,6 +18,7 @@ Plugin 'tpope/vim-fugitive'
 
 " Quality of life
 Plugin 'tpope/vim-surround'
+Plugin 'vim-airline/vim-airline'
 
 " Misc. stuff
 Plugin 'ntpeters/vim-better-whitespace'
@@ -29,6 +30,8 @@ Plugin 'crusoexia/vim-monokai'
 
 " Stop confirmation for C-family languages
 let g:ycm_confirm_extra_conf = 0
+
+let g:airline_powerline_fonts = 1
 
 call vundle#end()
 filetype plugin indent on
