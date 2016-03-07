@@ -62,7 +62,7 @@ bindkey '^R' history-incremental-search-backward
 # aliases
 alias vi='vim' # v(im)
 alias 6it='cd /home/zhang/Git'
-alias rpi='cd /home/zhang/Documents/RPI'
+alias rpi='cd /home/zhang/RPI'
 
 alias windows='sudo ntfs-3g /dev/sda4 /media/c' # mounts window (requires ntfs-3g to be installed)
 alias unwindows='sudo umount /media/c' # unmounts windows
