@@ -18,10 +18,14 @@ fi
 # Source fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# Source dynamic-colors
+source $HOME/.dynamic-colors/completions/dynamic-colors.zsh
+
 # prompt paradox (powerline theme)
 prompt paradox
 export EDITOR="vim"
 
+export PATH=$HOME/.dynamic-colors/bin:$PATH
 export PATH=$PATH:/usr/local/jdk1.7.0_79/bin
 export PATH=$PATH:.
 
