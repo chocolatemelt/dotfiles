@@ -101,6 +101,6 @@ pbs () {
 
 # print out the arch sysinfo for fun
 alias alsi='alsi -a'
-alsi
+alsi --blue
 
 # stackoverflow.com/questions/171563/whats-in-your-zshrc
