@@ -49,6 +49,7 @@ function run_once(cmd)
 end
 
 awful.util.spawn_with_shell("numlockx")
+awful.util.spawn_with_shell("dropbox")
 -- }}}
 
 -- {{{ Variable definitions
