@@ -28,6 +28,7 @@ Plugin 'tpope/vim-eunuch'
 " Themes
 Plugin 'crusoexia/vim-monokai'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'morhetz/gruvbox'
 
 " Stop confirmation for C-family languages
 let g:ycm_confirm_extra_conf = 0
@@ -165,7 +166,8 @@ set tm=500
 syntax enable
 
 " Cohesive color scheme with terminal
-colorscheme monokai
+colorscheme gruvbox
+let g:gruvbox_contrast_dark = 'hard'
 set background=dark
 
 " Highlight line number
