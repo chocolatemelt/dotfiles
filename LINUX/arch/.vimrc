@@ -6,6 +6,7 @@ filetype off
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=~/.fzf
 call vundle#begin()
 
 " let Vundle manage Vundle, required
@@ -19,6 +20,7 @@ Plugin 'tpope/vim-fugitive'
 " Quality of life
 Plugin 'tpope/vim-surround'
 Plugin 'vim-airline/vim-airline'
+Plugin 'junegunn/fzf.vim'
 
 " Misc. stuff
 Plugin 'ntpeters/vim-better-whitespace'
