@@ -70,10 +70,10 @@ alias vi='vim' # v(im)
 alias 6it='cd /home/zhang/Git'
 alias rpi='cd /home/zhang/RPI'
 
-alias windows='sudo ntfs-3g /dev/sdb4 /media/c' # mounts window (requires ntfs-3g to be installed)
+alias windows='sudo ntfs-3g /dev/sda4 /media/c' # mounts window (requires ntfs-3g to be installed)
 alias unwindows='sudo umount /media/c' # unmounts windows
 
-alias cgate='sudo ntfs-3g /dev/sda1 /media/d' # mounts 2tb seagate
+alias cgate='sudo ntfs-3g /dev/sdb1 /media/d' # mounts 2tb seagate
 alias uncgate='sudo umount /media/d' # unmounts d drive
 
 alias syupdate='sudo pacman -Syu' # system upgrade
