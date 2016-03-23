@@ -418,9 +418,9 @@ root.buttons(awful.util.table.join(
 
 -- {{{ Key bindings
 globalkeys = awful.util.table.join(
-    -- Take a screenshot
-    -- https://github.com/copycat-killer/dots/blob/master/bin/screenshot
-    awful.key({ altkey }, "p", function() os.execute("screenshot") end),
+    -- Take a screenshot (doesn't work / blows up)
+    -- see ptpb.pw
+    -- awful.key({ altkey }, "p", function() os.execute("pb") end),
 
     -- Tag browsing
     awful.key({ modkey }, "Left",   awful.tag.viewprev       ),
@@ -514,6 +514,21 @@ globalkeys = awful.util.table.join(
     awful.key({ altkey,           }, "w",      function () myweather.show(7) end),
 
     -- ALSA volume control
+    awful.key({}, "XF86AudioRaiseVolume",
+        function ()
+            os.execute("amixer -q sset Master 2%+")
+            volumewidget.update()
+        end),
+    awful.key({}, "XF86AudioLowerVolume",
+        function ()
+            os.execute("amixer -q sset Master 2%-")
+            volumewidget.update()
+        end),
+    awful.key({}, "XF86AudioMute",
+        function ()
+            os.execute("amixer -q sset Master toggle")
+            volumewidget.update()
+        end),
     awful.key({ altkey }, "Up",
         function ()
             os.execute("amixer -q sset Master 2%+")
@@ -531,6 +546,21 @@ globalkeys = awful.util.table.join(
         end),
 
     -- MPD control
+    awful.key({}, "XF86AudioPlay",
+        function ()
+            awful.util.spawn_with_shell("mpc toggle || ncmpc toggle || pms toggle")
+            mpdwidget.update()
+        end),
+    awful.key({}, "XF86AudioPrev",
+        function ()
+            awful.util.spawn_with_shell("mpc prev || ncmpc prev || pms prev")
+            mpdwidget.update()
+        end),
+    awful.key({}, "XF86AudioNext",
+        function ()
+            awful.util.spawn_with_shell("mpc next || ncmpc next || pms next")
+            mpdwidget.update()
+        end),
     awful.key({ altkey, "Control" }, "Up",
         function ()
             awful.util.spawn_with_shell("mpc toggle || ncmpc toggle || pms toggle")
