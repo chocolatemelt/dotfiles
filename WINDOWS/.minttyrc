@@ -1,7 +1,6 @@
-Transparency=low
-OpaqueWhenFocused=no
-Font=Migu 1M
-BackgroundColour=21,22,26
-Scrollbar=none
+Font=Lucida Console
 FontHeight=10
-FontSmoothing=default
+BackgroundColour=0,0,0
+Transparency=medium
+FontSmoothing=full
+Scrollbar=none
