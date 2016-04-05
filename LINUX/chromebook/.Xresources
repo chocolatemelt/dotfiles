@@ -26,25 +26,25 @@ xterm*faceName: Source Code Pro for Powerline, Light:size=10:antialias=true
 xterm*faceNameDoublesize: Ricty:size=11:antialias=true
 xterm*font: 7x13
 
-! Molokai theme
-URxvt*background: #1d1f24
-URxvt*foreground: #d0d0d0
-URxvt*color0: #101010
-URxvt*color1: #960050
-URxvt*color2: #66aa11
-URxvt*color3: #c47f2c
-URxvt*color4: #30309b
-URxvt*color5: #7e40a5
-URxvt*color6: #3579a8
-URxvt*color7: #9999aa
-URxvt*color8: #303030
-URxvt*color9: #ff0090
-URxvt*color10: #80ff00
-URxvt*color11: #ffba68
-URxvt*color12: #5f5fee
-URxvt*color13: #bb88dd
-URxvt*color14: #4eb4fa
-URxvt*color15: #d0d0d0j
+! Gruvbox theme
+URxvt*background: #1d2021
+URxvt*foreground: #fbd1c7
+URxvt*color0: #282828
+URxvt*color1: #cc241d
+URxvt*color2: #98971a
+URxvt*color3: #d79921
+URxvt*color4: #458588
+URxvt*color5: #b16286
+URxvt*color6: #689d6a
+URxvt*color7: #a89984
+URxvt*color8: #928374
+URxvt*color9: #fb4934
+URxvt*color10: #b8bb26
+URxvt*color11: #fabd2f
+URxvt*color12: #83a598
+URxvt*color13: #d3869b
+URxvt*color14: #8ec07c
+URxvt*color15: #ebdbb2
 !URxvt*font: xft:Inconsolata for Powerline:pixexsize=12:antialias=true,xft:DejaVu Sans Mono for Powerline, Book:pixelsize=12:antialias=true,xft:Ricty:pixelsize=12:antialias=true
 URxvt*font: xft:Ricty:pixelsize=12:antialias=true,xft:DejaVu Sans Mono for Powerline:pixelsize=12:antialias=true
 URxvt*title: ターミナル

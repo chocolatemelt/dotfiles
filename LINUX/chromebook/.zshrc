@@ -32,7 +32,7 @@ export PATH=$PATH:$JAVA_HOME/bin
 # dynamic-colors
 export PATH=$PATH:.
 export PATH=$HOME/.dynamic-colors/bin:$PATH
-dynamic-colors init
+# dynamic-colors init
 
 # colored less output
 export LESS=-R
