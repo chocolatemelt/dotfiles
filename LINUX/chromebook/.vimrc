@@ -6,6 +6,7 @@ filetype off
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=~/.fzf
 call vundle#begin()
 
 " let Vundle manage Vundle, required
@@ -18,6 +19,8 @@ Plugin 'tpope/vim-fugitive'
 
 " Quality of life
 Plugin 'tpope/vim-surround'
+Plugin 'vim-airline/vim-airline'
+Plugin 'junegunn/fzf.vim'
 
 " Misc. stuff
 Plugin 'ntpeters/vim-better-whitespace'
@@ -26,10 +29,15 @@ Plugin 'tpope/vim-eunuch'
 
 " Themes
 Plugin 'crusoexia/vim-monokai'
-" Plugin 'altercation/vim-colors-solarized'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'morhetz/gruvbox'
 
 " Stop confirmation for C-family languages
 let g:ycm_confirm_extra_conf = 0
+
+" Airline configuration
+let g:airline_powerline_fonts = 1
+let g:airline_theme='wombat'
 
 call vundle#end()
 filetype plugin indent on
@@ -38,6 +46,9 @@ filetype plugin indent on
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Clear autocommands for safety
+autocmd!
+
 " Sets how many lines of history VIM has to remember
 set history=500
 
@@ -59,7 +70,7 @@ inoremap jj <ESC>
 nmap <leader>w :w!<cr>
 
 " Powerline support
-set rtp+=/usr/lib/python3.5/site-packages/powerline/bindings/vim/
+set rtp+=/usr/lib/python3.4/site-packages/powerline/bindings/vim/
 
 " fzf support
 set rtp+=~/.fzf
@@ -80,11 +91,16 @@ cmap w!! w !sudo tee > /dev/null %
 " Set 7 lines to the cursor - when moving vertically using j/k
 set so=7
 
-" Show line numbers
+" Show relative line numbers
 set number
+set relativenumber
 
-" Show command in bottom bar
-set showcmd
+" Right align current line number
+" NOTE: only works with -my- current vim build (see pulreq#680)
+set ra
+
+" Hide statusline because we're using airline
+set noshowmode
 
 " Turn on the WiLd menu
 set wildmenu
@@ -127,7 +143,7 @@ set hlsearch
 " Makes search act like search in modern browsers
 set incsearch
 
-" Don't redraw while executing macros (good performance config)
+" Don't redraw while executing macros
 set lazyredraw
 
 " For regular expressions turn magic on
@@ -144,12 +160,6 @@ set novisualbell
 set t_vb=
 set tm=500
 
-" No --INSERT--
-set noshowmode
-
-" Set folds
-set modelines=1
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
@@ -158,8 +168,13 @@ set modelines=1
 syntax enable
 
 " Cohesive color scheme with terminal
-colorscheme monokai
+colorscheme gruvbox
+let g:gruvbox_contrast_dark = 'hard'
 set background=dark
+
+" Highlight line number
+highlight CursorLine cterm=NONE ctermbg=NONE ctermfg=NONE guibg=NONE guifg=NONE
+set cursorline
 
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
@@ -171,7 +186,7 @@ set ffs=unix,dos,mac
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Turn backup off, since most stuff is in SVN, git etc. anyway...
+" Turn backup off, since most stuff is in SVN, git et.c anyway...
 set nobackup
 set nowb
 set noswapfile
@@ -312,9 +327,6 @@ map <leader>q :e ~/buffer<cr>
 " Quickly open a markdown buffer for scribble
 map <leader>x :e ~/buffer.md<cr>
 
-" Paste from clipboard buffer
-map <C-V> "*p
-
 " Toggle paste mode on and off
 map <leader>pp :setlocal paste!<cr>
 
@@ -379,3 +391,75 @@ function! <SID>BufcloseCloseIt()
    endif
 endfunction
 
+" Automatically set relative and absolute line numbers
+" Jeff Kreeftmeijer (http://jeffkreeftmeijer.com/2012/relative-line-numbers-in-vim-for-super-fast-movement/)
+let g:insertmode = 0
+let g:relativemode = 1
+
+" Enables relative numbers.
+function! EnableRelativeNumbers()
+	set number
+	set relativenumber
+endfunc
+
+" Disables relative numbers.
+function! DisableRelativeNumbers()
+	set number
+	set norelativenumber
+endfunc
+
+" NumberToggle toggles between relative and absolute line numbers
+function! NumberToggle()
+	if(&relativenumber == 1)
+		call DisableRelativeNumbers()
+		let g:relativemode = 0
+	else
+		call EnableRelativeNumbers()
+		let g:relativemode = 1
+	endif
+endfunc
+
+function! UpdateMode()
+	if(&number == 0 && &relativenumber == 0)
+		return
+	end
+
+	if(g:insertmode == 0 && g:relativemode == 1)
+		call EnableRelativeNumbers()
+	else
+		call DisableRelativeNumbers()
+	end
+
+	if !exists("&numberwidth") || &numberwidth <= 4
+		" Avoid changing actual width of the number column with each jump between
+		" number and relativenumber:
+		let &numberwidth = max([4, 1+len(line('$'))])
+	else
+		" Explanation of the calculation:
+		" - Add 1 to the calculated maximal width to make room for the space
+		" - Assume 4 as the minimum desired width if &numberwidth is not set or is
+		"   smaller than 4
+		let &numberwidth = max([&numberwidth, 1+len(line('$'))])
+	endif
+endfunc
+
+function! InsertLeave()
+	let g:insertmode = 0
+	call UpdateMode()
+endfunc
+
+function! InsertEnter()
+	let g:insertmode = 1
+	call UpdateMode()
+endfunc
+
+" Automatically set relative line numbers when opening a new document
+autocmd BufNewFile * :call UpdateMode()
+autocmd BufReadPost * :call UpdateMode()
+autocmd FilterReadPost * :call UpdateMode()
+autocmd FileReadPost * :call UpdateMode()
+
+" Switch to absolute line numbers when entering insert mode and switch back to
+" relative line numbers when switching back to normal mode.
+autocmd InsertEnter * :call InsertEnter()
+autocmd InsertLeave * :call InsertLeave()
