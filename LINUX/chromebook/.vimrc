@@ -15,16 +15,13 @@ Plugin 'VundleVim/Vundle.vim'
 " IDE emulation
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-fugitive'
 
 " Quality of life
 Plugin 'tpope/vim-surround'
 Plugin 'vim-airline/vim-airline'
-Plugin 'junegunn/fzf.vim'
 
 " Misc. stuff
 Plugin 'ntpeters/vim-better-whitespace'
-Plugin 'whatyouhide/vim-lengthmatters'
 Plugin 'tpope/vim-eunuch'
 
 " Themes
