@@ -6,6 +6,7 @@
 	"installed_packages":
 	[
 		"BinaryPlist",
+		"Material Theme",
 		"Package Control",
 		"SideBarEnhancements",
 		"SideBarFolders",
