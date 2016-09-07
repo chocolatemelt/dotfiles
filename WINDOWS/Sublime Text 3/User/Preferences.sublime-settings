@@ -1,6 +1,7 @@
 {
-	"theme": "Material-Theme-Darker.sublime-theme",
-	"color_scheme": "Packages/Material Theme/schemes/Material-Theme-Darker.tmTheme",
+	"theme": "Material-Theme-Lighter.sublime-theme",
+	"color_scheme": "Packages/Material Theme/schemes/Material-Theme-Lighter.tmTheme",
+	"material_theme_accent_pink": true , // Set graphite accent color
 	"font_face": "Fantasque Sans Mono",
 	"font_size": 11,
 	"ignored_packages":
@@ -8,6 +9,8 @@
 		"Vintage"
 	],
 	"tab_size": 2,
+	"indent_guide_options": [ "draw_normal", "draw_active" ],
+	"font_options": [ "gray_antialias", "subpixel_antialias" ],
 	"indent_guide_options": [ "draw_normal", "draw_active" ],
 	"bold_folder_labels": true,
 	"always_show_minimap_viewport": true,
