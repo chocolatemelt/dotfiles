@@ -102,5 +102,4 @@ bindkey '^R' history-incremental-search-backward
 # aliases
 alias rz='source ~/.zshrc' # shell reload after configuration changes
 alias ez='vim ~/.zshrc' # change this file
-alias 6it='cd /cygdrive/c/Users/kzhaa_000/Documents/Github' # go to git directory
-alias todo='vim /cygdrive/c/Users/kzhaa_000/Documents/TODO' # open todo file (haha)
+alias 6it='cd /cygdrive/c/Users/Kevin/Git' # go to git directory
