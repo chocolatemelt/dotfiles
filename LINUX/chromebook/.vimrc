@@ -103,6 +103,7 @@ endif
 
 set tags=./tags;/,tags;/$HOME/.local/share/tags
 set omnifunc=syntaxcomplete#Complete
+set foldmethod=syntax
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
