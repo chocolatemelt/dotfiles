@@ -164,7 +164,7 @@ set tm=500
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable syntax highlighting
-syntax enable
+syntax on
 
 " Cohesive color scheme with terminal
 colorscheme gruvbox
