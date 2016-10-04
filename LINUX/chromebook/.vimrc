@@ -84,6 +84,26 @@ set t_Co=256
 cmap w!! w !sudo tee > /dev/null %
 
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => CTags etc.
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Replace ack.vim
+if executable('ag')
+	set grepprg=ag\ --vimgrep\ --smart-case
+elseif executable('ack')
+	set grepprg=ack\ -R\ --nocolor\ --nogroup\ --column
+endif
+
+if has('cscope')
+	set cscopetag
+	if has('quickfix')
+		set cscopequickfix=s-,c-,d-,i-,t-,e-
+	endif
+endif
+
+set tags=./tags;/,tags;/$HOME/.local/share/tags
+set omnifunc=syntaxcomplete#Complete
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
