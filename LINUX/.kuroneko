@@ -1,0 +1,8 @@
+# kuroneko-pc local dotfiles.
+
+# aliases
+alias 6it='cd /home/zhang/Git'
+alias rpi='cd /home/zhang/RPI'
+
+alias windows='sudo ntfs-3g /dev/sdb2 /media/c'
+alias unwindows='sudo umount /media/c'
