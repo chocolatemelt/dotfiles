@@ -25,7 +25,6 @@ prompt paradox
 export EDITOR="vim"
 
 # export dynamic colors, color scripts, etc
-export PATH=$PATH:/usr/local/jdk1.7.0_79/bin
 export PATH=$PATH:$HOME/.dynamic-colors/bin
 export PATH=$PATH:$HOME/.color-scripts/color-scripts
 export PATH=$PATH:.
