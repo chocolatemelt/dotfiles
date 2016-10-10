@@ -1,9 +1,8 @@
-#
-# Executes commands at the start of an interactive session.
-#
-# Authors:
-#   Sorin Ionescu <sorin.ionescu@gmail.com>
-#
+# Main zshrc file.
+
+# Source local dotfiles
+HOSTNAME=$(hostname)
+source "$HOME/.$HOSTNAME"
 
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
@@ -67,14 +66,6 @@ bindkey '^R' history-incremental-search-backward
 
 # aliases
 alias vi='vim' # v(im)
-alias 6it='cd /home/zhang/Git'
-alias rpi='cd /home/zhang/RPI'
-
-alias windows='sudo ntfs-3g /dev/sda4 /media/c' # mounts window (requires ntfs-3g to be installed)
-alias unwindows='sudo umount /media/c' # unmounts windows
-
-alias cgate='sudo ntfs-3g /dev/sdb1 /media/d' # mounts 2tb seagate
-alias uncgate='sudo umount /media/d' # unmounts d drive
 
 alias syupdate='sudo pacman -Syu' # system upgrade
 alias pacro='sudo pacman -Rns $(pacman -Qtdq)' # remove orphaned packages
