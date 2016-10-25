@@ -1,17 +1,15 @@
 ## Configuration file for CAVA. Default values are commented out.  Use either ; or # for commenting.
-
-
 [general]
 
 # smoothing mode, can be normal, scientific or waves.
 mode = normal
 
 # Framerate Default: 60. Accepts only non-negative values.
-; framerate = 60
+framerate = 144
 
 # Sensitivity in  %. If you think the bars are to low/response is to littei, try
 # increasing this value 200 means double height. Accepts only non-negative values.
-sensitivity = 150
+sensitivity = 100
 
 # Autosens will atempt to decrease sensitivity if cava peaks. 1 = on, 0 = off
 ; autosens = 1
@@ -19,7 +17,7 @@ sensitivity = 150
 # The number of bars. 0 (default) sets it to auto (fil upp console).
 # width of bras and space between bars in number of characters. Default witdth 3 and space 1.
 bars = 0
-bar_width = 1
+bar_width = 3
 bar_spacing = 1
 
 
@@ -71,7 +69,7 @@ style = stereo
 [color]
 
 # supported colors are: red, green, yellow, magenta, cyan, white, blue, black.
-; background = black
+;background = black
 foreground = white
 
 
@@ -79,19 +77,17 @@ foreground = white
 
 # multiplier for the integral smoothing calculations. Takes values from 0 - 0.99.
 # Higher values means smoother, but less precise. 0 to disable.
-; integral = 0.7
+;integral = 0.7
 
 # disables or enables the so-called "Monstercat smoothing". Default: 1. Set to 0 to disable.
-; monstercat = 1
+monstercat = 1
 
 # Set gravity multiplier for "drop off". Higher values means bars will drop faster.
 # Accepts only non-negative values. 0.5 means half gravity, 2 means double. Set to 0 to disable "drop off".
 gravity = 10
 
-
 # In bar height, bars that whould have been lower that this will not be drawn.
 ignore = 2
-
 
 [eq]
 
