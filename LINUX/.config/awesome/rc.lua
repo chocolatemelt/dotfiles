@@ -244,6 +244,7 @@ memwidget = lain.widgets.mem({
 -- MPD
 mpdicon = wibox.widget.imagebox()
 mpdwidget = lain.widgets.mpd({
+    music_dir = "/media/roe/Music",
     settings = function()
         mpd_notification_preset = {
             text = string.format("%s [%s] - %s\n%s", mpd_now.artist,
