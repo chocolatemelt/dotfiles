@@ -1,8 +1,12 @@
 # kuroneko-pc local dotfiles.
 
+#paths
+export PATH=/home/zhang/Git/LLVM-Compiler-Case-Study/build/bin:$PATH
+
 # aliases
 alias 6it='cd /home/zhang/Git'
 alias rpi='cd /home/zhang/RPI'
+alias ezz='vim /home/zhang/.kuroneko'
 
 alias windows='sudo ntfs-3g /dev/sdb2 /media/c'
 alias unwindows='sudo umount /media/c'
