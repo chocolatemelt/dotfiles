@@ -1,0 +1,9 @@
+[submodule "LINUX/tmux-powerline"]
+	path = LINUX/tmux-powerline
+	url = https://github.com/chocolatemelt/tmux-powerline
+[submodule "LINUX/dynamic-colors"]
+	path = LINUX/dynamic-colors
+	url = https://github.com/chocolatemelt/dynamic-colors
+[submodule "LINUX/.dynamic-colors"]
+	path = LINUX/.dynamic-colors
+	url = https://github.com/chocolatemelt/dynamic-colors

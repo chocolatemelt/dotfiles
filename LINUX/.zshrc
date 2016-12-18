@@ -1,9 +1,8 @@
-#
-# Executes commands at the start of an interactive session.
-#
-# Authors:
-#   Sorin Ionescu <sorin.ionescu@gmail.com>
-#
+# Main zshrc file.
+
+# Source local dotfiles
+HOSTNAME=$(hostname)
+source "$HOME/.$HOSTNAME"
 
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
@@ -25,14 +24,13 @@ source $HOME/.dynamic-colors/completions/dynamic-colors.zsh
 prompt paradox
 export EDITOR="vim"
 
-# jdk
-export JAVA_HOME=/usr/share/jdk1.7.0_79
-export PATH=$PATH:$JAVA_HOME/bin
+# export personal scripts (lock, ptpbw, etc)
+export PATH=$PATH:$HOME/.scripts
 
-# dynamic-colors
+# export dynamic colors, color scripts, etc
+export PATH=$PATH:$HOME/.dynamic-colors/bin
+export PATH=$PATH:$HOME/.color-scripts/color-scripts
 export PATH=$PATH:.
-export PATH=$HOME/.dynamic-colors/bin:$PATH
-# dynamic-colors init
 
 # colored less output
 export LESS=-R
@@ -70,8 +68,6 @@ bindkey '^R' history-incremental-search-backward
 
 # aliases
 alias vi='vim' # v(im)
-alias 6it='cd /home/zhang/docs/git' # go to git directory
-alias rpi='cd /home/zhang/docs/rpi' # go to rpi directory
 
 alias syupdate='sudo pacman -Syu' # system upgrade
 alias pacro='sudo pacman -Rns $(pacman -Qtdq)' # remove orphaned packages
@@ -85,25 +81,11 @@ alias rx='xrdb ~/.Xresources' # reload x stuff
 alias ea='vim ~/.config/awesome/rc.lua' # edit awesome
 alias ev='vim ~/.vimrc' # edit vim
 
-alias fuck='eval $(thefuck $(fc -ln -1)); history -r' # fuck
-alias FUCK='fuck' # mondays
-
-alias subl='subl3'
 alias google-chrome='google-chrome-stable'
 alias chrome='google-chrome'
-alias smart='sudo smartctl /dev/sda -a'
-
-# ptpb.pw - paste and copy to clipboard buffer
-pb () { curl -sF "c=@${1:--}" -w "%{redirect_url}" 'https://ptpb.pw/?r=1' -o /dev/stderr | xsel -l /dev/null -b }
-
-# ptpb.pw - screenshot and copy to clipboard buffer
-pbs () {
-	gm import -window ${1:-root} /tmp/$$.png
-	pb /tmp/$$.png
-}
 
 # print out the arch sysinfo for fun
 alias alsi='alsi -a'
-alsi
+alsi --blue
 
 # stackoverflow.com/questions/171563/whats-in-your-zshrc

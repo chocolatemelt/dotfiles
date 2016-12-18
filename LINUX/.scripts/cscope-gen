@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+ack -f --cc --cpp > cscope.files
+cscope -cb
+ctags -R --c++-kinds=+p --fields=+iaS --extra=+q -n -L cscope.files
