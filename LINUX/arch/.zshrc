@@ -25,6 +25,9 @@ source $HOME/.dynamic-colors/completions/dynamic-colors.zsh
 prompt paradox
 export EDITOR="vim"
 
+# export llvm
+export PATH=/home/zhang/Git/LLVM-Compiler-Case-Study/build/bin:$PATH
+
 # export dynamic colors, color scripts, etc
 export PATH=$PATH:/usr/local/jdk1.7.0_79/bin
 export PATH=$PATH:$HOME/.dynamic-colors/bin

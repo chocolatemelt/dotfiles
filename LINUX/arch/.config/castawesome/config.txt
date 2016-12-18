@@ -1,0 +1,22 @@
+{
+    "inres": "1920x1080",
+    "outres": "1280x720",
+    "x_offset": "0",
+    "y_offset": "0",
+    "fps": "15",
+    "quality": "fast",
+    "bitrate": "1000k",
+    "audio_bitrate" : "320k",
+    "advanced_settings" : "False",
+    "video_container" : "flv",
+    "video_codec" : "h264",
+    "audio_codec" : "mp3",
+    "threads": "2",
+    "show_region": "True",
+    "use_watermark" : "False",
+    "watermark_file" : "",
+    "use_webcam" : "False",
+    "webcam_placement" : "0:0",
+    "webcam_resolution" : "320x200",
+    "service": "rtmp://live.twitch.tv/app/"
+}
