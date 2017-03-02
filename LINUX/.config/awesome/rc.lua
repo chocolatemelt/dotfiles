@@ -341,6 +341,21 @@ globalkeys = awful.util.table.join(
     awful.key({ altkey, }, "w", function () if beautiful.weather then beautiful.weather.show(7) end end),
 
     -- ALSA volume control
+    awful.key({}, "XF86AudioRaiseVolume",
+        function ()
+            os.execute(string.format("amixer set %s 1%%+", beautiful.volume.channel))
+            beautiful.volume.update()
+        end),
+    awful.key({}, "XF86AudioLowerVolume",
+        function ()
+            os.execute(string.format("amixer set %s 1%%-", beautiful.volume.channel))
+            beautiful.volume.update()
+        end),
+    awful.key({}, "XF86AudioMute",
+        function ()
+            os.execute(string.format("amixer set %s toggle", beautiful.volume.togglechannel or beautiful.volume.channel))
+            beautiful.volume.update()
+				end),
     awful.key({ altkey }, "Up",
         function ()
             os.execute(string.format("amixer set %s 1%%+", beautiful.volume.channel))
@@ -369,6 +384,21 @@ globalkeys = awful.util.table.join(
 				end),
 
     -- MPD control
+    awful.key({}, "XF86AudioPlay",
+        function ()
+            awful.spawn.with_shell("mpc toggle")
+            beautiful.mpd.update()
+        end),
+    awful.key({}, "XF86AudioPrev",
+        function ()
+            awful.spawn.with_shell("mpc prev")
+            beautiful.mpd.update()
+        end),
+    awful.key({}, "XF86AudioNext",
+        function ()
+            awful.spawn.with_shell("mpc next")
+            beautiful.mpd.update()
+        end),
     awful.key({ altkey, "Control" }, "Up",
         function ()
             awful.spawn.with_shell("mpc toggle")
