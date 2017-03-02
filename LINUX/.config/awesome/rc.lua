@@ -59,7 +59,7 @@ run_once({ "urxvtd", "unclutter -root", "numlockx", "dropbox", "pulseaudio" })
 -- }}}
 
 -- {{{ Variable definitions
-local chosen_theme = "multicolor"
+local chosen_theme = "personal"
 local modkey       = "Mod4"
 local altkey       = "Mod1"
 local terminal     = "urxvtc" or "xterm"
@@ -644,11 +644,6 @@ client.connect_signal("request::titlebars", function(c)
             layout  = wibox.layout.flex.horizontal
         },
         { -- Right
-            awful.titlebar.widget.floatingbutton (c),
-            awful.titlebar.widget.maximizedbutton(c),
-            awful.titlebar.widget.stickybutton   (c),
-            awful.titlebar.widget.ontopbutton    (c),
-            awful.titlebar.widget.closebutton    (c),
             layout = wibox.layout.fixed.horizontal()
         },
         layout = wibox.layout.align.horizontal
