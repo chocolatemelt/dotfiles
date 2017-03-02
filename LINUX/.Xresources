@@ -26,5 +26,5 @@ URxvt*color12: #83a598
 URxvt*color13: #d3869b
 URxvt*color14: #8ec07c
 URxvt*color15: #ebdbb2
-URxvt*font: xft:Inconsolata for Powerline:pixelsize=12,xft:Ricty,xft:Source Han Sans
+URxvt*font: xft:Inconsolata for Powerline:pixelsize=12,xft:DejaVu Sans Mono:style=Book,xft:Ricty,xft:Source Han Sans
 URxvt*title: ターミナル
