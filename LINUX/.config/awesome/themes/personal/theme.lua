@@ -227,10 +227,12 @@ local memory = lain.widget.mem({
 local mpdicon = wibox.widget.imagebox()
 theme.mpd = lain.widget.mpd({
     music_dir = "/media/roe/Music",
+		cover_size = 64,
     settings = function()
         mpd_notification_preset = {
-            text = string.format("%s [%s] - %s\n%s", mpd_now.artist,
-                   mpd_now.album, mpd_now.date, mpd_now.title)
+        		font = "Ricty 10",
+            text = string.format("%s [%s]\n%s", mpd_now.artist,
+                   mpd_now.album, mpd_now.title)
         }
 
         if mpd_now.state == "play" then
