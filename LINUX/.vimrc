@@ -25,6 +25,7 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'whatyouhide/vim-lengthmatters'
 Plugin 'tpope/vim-eunuch'
+Plugin 'tpope/vim-sleuth'
 
 " Themes
 Plugin 'crusoexia/vim-monokai'
