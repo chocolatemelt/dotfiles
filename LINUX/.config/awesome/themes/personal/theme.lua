@@ -230,9 +230,9 @@ theme.mpd = lain.widget.mpd({
 		cover_size = 64,
     settings = function()
         mpd_notification_preset = {
-        		font = "Ricty 10",
-            text = string.format("%s [%s]\n%s", mpd_now.artist,
-                   mpd_now.album, mpd_now.title)
+        		font = "Helvetica Light 16",
+            text = string.format("%s\n%s // %s", mpd_now.title,
+                   mpd_now.artist, mpd_now.album)
         }
 
         if mpd_now.state == "play" then
