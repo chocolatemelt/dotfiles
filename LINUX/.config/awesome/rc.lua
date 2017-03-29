@@ -55,7 +55,7 @@ local function run_once(cmd_arr)
     end
 end
 
-run_once({ "urxvtd", "unclutter -root", "numlockx", "dropbox", "pulseaudio" })
+run_once({ "urxvtd", "unclutter -root", "numlockx", "dropbox", "pulseaudio", "compton -b -c --backend glx --vsync opengl-swc" })
 -- }}}
 
 -- {{{ Variable definitions
