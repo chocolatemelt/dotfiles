@@ -55,7 +55,7 @@ local function run_once(cmd_arr)
     end
 end
 
-run_once({ "urxvtd", "unclutter -root", "numlockx", "dropbox", "pulseaudio" })
+run_once({ "urxvtd", "unclutter -root", "numlockx", "dropbox", "pulseaudio", "compton -b -c --backend glx --vsync opengl-swc" })
 -- }}}
 
 -- {{{ Variable definitions
@@ -252,8 +252,6 @@ globalkeys = awful.util.table.join(
             awful.client.focus.bydirection("right")
             if client.focus then client.focus:raise() end
         end),
-    awful.key({ modkey,           }, "w", function () awful.util.mymainmenu:show() end,
-              {description = "show main menu", group = "awesome"}),
 
     -- Layout manipulation
     awful.key({ modkey, "Shift"   }, "j", function () awful.client.swap.byidx(  1)    end,
