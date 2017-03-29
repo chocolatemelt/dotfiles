@@ -16,7 +16,7 @@ local os    = { getenv = os.getenv, setlocale = os.setlocale }
 local theme                                     = {}
 theme.confdir                                   = os.getenv("HOME") .. "/.config/awesome/themes/personal"
 theme.wallpaper                                 = theme.confdir .. "/wall.png"
-theme.font                                      = "tewi 8"
+theme.font                                      = "lucy tewi 8"
 theme.menu_bg_normal                            = "#000000"
 theme.menu_bg_focus                             = "#000000"
 theme.bg_normal                                 = "#000000"
