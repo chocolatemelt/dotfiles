@@ -97,16 +97,14 @@ local temp = lain.widget.temp({
 
 -- Battery
 local bat = lain.widget.bat({
-	  batteries = {"BAT1"},
+	  battery = "BAT0",
     settings = function()
-        if bat_now.perc ~= "N/A" then
-            bat_now.perc = bat_now.perc .. "%"
-        end
+				local perc  = bat_now.perc ~= "N/A" and bat_now.perc .. "%" or bat_now.perc
         if bat_now.ac_status == 1 then
-            bat_now.perc = bat_now.perc .. " plug"
+            perc = perc .. " plug"
         end
 
-        widget:set_markup(markup.fontfg(theme.font, theme.fg_normal, "bat " .. bat_now.perc .. "%        "))
+        widget:set_markup(markup.fontfg(theme.font, theme.fg_normal, "bat " .. perc .. "        "))
     end
 })
 
@@ -216,7 +214,7 @@ function theme.at_screen_connect(s)
             -- theme.fs.widget,
             temp.widget,
             -- theme.weather.widget,
-            -- bat.widget,
+            bat.widget,
             mytextclock,
         },
     }
