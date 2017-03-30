@@ -284,12 +284,12 @@ globalkeys = awful.util.table.join(
     end),
 
     -- On the fly useless gaps change
-    awful.key({ altkey, "Control" }, "+", function () lain.util.useless_gaps_resize(1) end),
-    awful.key({ altkey, "Control" }, "-", function () lain.util.useless_gaps_resize(-1) end),
+    awful.key({ modkey, "Control" }, "=", function () lain.util.useless_gaps_resize(5) end),
+    awful.key({ modkey, "Control" }, "-", function () lain.util.useless_gaps_resize(-5) end),
 
     -- Dynamic tagging
     awful.key({ modkey, "Shift" }, "n", function () lain.util.add_tag() end),
-    awful.key({ modkey, "Shift" }, "r", function () lain.util.rename_tag() end),
+    -- awful.key({ modkey, "Shift" }, "r", function () lain.util.rename_tag() end),
     awful.key({ modkey, "Shift" }, "Left", function () lain.util.move_tag(1) end),   -- move to next tag
     awful.key({ modkey, "Shift" }, "Right", function () lain.util.move_tag(-1) end), -- move to previous tag
     awful.key({ modkey, "Shift" }, "d", function () lain.util.delete_tag() end),
@@ -451,14 +451,14 @@ globalkeys = awful.util.table.join(
 		end)
     --]]
     -- Prompt
-    -- awful.key({ modkey }, "r", function () awful.screen.focused().mypromptbox:run() end,
-    --           {description = "run prompt", group = "launcher"}),
-		awful.key({ modkey }, "r", function() awful.spawn.with_shell("rofi -show run") end),
+    awful.key({ modkey, "Shift" }, "r", function () awful.screen.focused().mypromptbox:run() end,
+              {description = "run prompt", group = "launcher"}),
+		awful.key({ modkey }, "r", function() awful.spawn.with_shell("rofi -show run -font \"lucy tewi 8\"") end),
 
     awful.key({ modkey }, "x",
               function ()
                   awful.prompt.run {
-                    prompt       = "Run Lua code: ",
+                    prompt       = "  lua: ",
                     textbox      = awful.screen.focused().mypromptbox.widget,
                     exe_callback = awful.util.eval,
                     history_path = awful.util.get_cache_dir() .. "/history_eval"
