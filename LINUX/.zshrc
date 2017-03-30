@@ -21,7 +21,7 @@ fi
 source $HOME/.dynamic-colors/completions/dynamic-colors.zsh
 
 # prompt paradox (powerline theme)
-prompt paradox
+prompt minimal
 export EDITOR="vim"
 
 # export personal scripts (lock, ptpbw, etc)
@@ -86,6 +86,8 @@ alias chrome='google-chrome'
 
 # print out the arch sysinfo for fun
 alias alsi='alsi -a'
-alsi --blue
+alias seungyeon='neofetch --w3m /home/zhang/Dropbox/Linux/neofetch.png --size 214px --gtk2 off'
+alias neofetch='neofetch --size 214px --gtk2 off'
+neofetch
 
 # stackoverflow.com/questions/171563/whats-in-your-zshrc
