@@ -6,6 +6,7 @@ Xft*rgba: rgb
 Xft*lcdfilter: lcddefault
 
 ! rxvt
+URxvt*internalBorder: 20
 URxvt*scrollBar: false
 URxvt*mouseWheelScrollPage: false
 
