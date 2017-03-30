@@ -47,7 +47,7 @@ local markup = lain.util.markup
 
 -- Textclock
 os.setlocale(os.getenv("LANG")) -- to localize the clock
-local mytextclock = wibox.widget.textclock(markup("#7788af", "%A %d %B ") .. markup("#535f7a", ">") .. markup("#de5e1e", " %H:%M "))
+local mytextclock = wibox.widget.textclock(markup(theme.fg_normal, "%a %d %b") .. " " .. markup(theme.fg_focus, "%H:%M "))
 mytextclock.font = theme.font
 
 -- Calendar
@@ -68,7 +68,7 @@ theme.weather = lain.widget.weather({
     settings = function()
         descr = weather_now["weather"][1]["description"]:lower()
         units = math.floor(weather_now["main"]["temp"])
-        widget:set_markup(markup.fontfg(theme.font, "#eca4c4", descr .. " @ " .. units .. "°C "))
+        widget:set_markup(markup.fontfg(theme.font, theme.fg_normal, descr .. " @ " .. units .. "°C        "))
     end
 })
 
@@ -77,21 +77,21 @@ theme.fs = lain.widget.fs({
     options = "--exclude-type=tmpfs",
     notification_preset = { font = "lucy tewi 8", fg = theme.fg_normal },
     settings  = function()
-        widget:set_markup(markup.fontfg(theme.font, "#80d9d8", fs_now.used .. "% "))
+        widget:set_markup(markup.fontfg(theme.font, "#80d9d8", fs_now.used .. "%        "))
     end
 })
 
 -- CPU
 local cpu = lain.widget.cpu({
     settings = function()
-        widget:set_markup(markup.fontfg(theme.font, "#e33a6e", cpu_now.usage .. "% "))
+        widget:set_markup(markup.fontfg(theme.font, theme.fg_normal, "cpu " .. cpu_now.usage .. "%        "))
     end
 })
 
 -- Coretemp
 local temp = lain.widget.temp({
     settings = function()
-        widget:set_markup(markup.fontfg(theme.font, "#f1af5f", coretemp_now .. "°C "))
+        widget:set_markup(markup.fontfg(theme.font, theme.fg_normal, "core " .. coretemp_now .. "°C        "))
     end
 })
 
@@ -106,7 +106,7 @@ local bat = lain.widget.bat({
             bat_now.perc = bat_now.perc .. " plug"
         end
 
-        widget:set_markup(markup.fontfg(theme.font, theme.fg_normal, bat_now.perc .. " "))
+        widget:set_markup(markup.fontfg(theme.font, theme.fg_normal, "bat " .. bat_now.perc .. "%        "))
     end
 })
 
@@ -117,7 +117,7 @@ theme.volume = lain.widget.alsa({
             volume_now.level = volume_now.level .. "M"
         end
 
-        widget:set_markup(markup.fontfg(theme.font, "#7493d2", volume_now.level .. "% "))
+        widget:set_markup(markup.fontfg(theme.font, theme.fg_normal, "vol " .. volume_now.level .. "%        "))
     end
 })
 
@@ -131,15 +131,15 @@ local netupinfo = lain.widget.net({
             theme.weather.update()
         end
 
-        widget:set_markup(markup.fontfg(theme.font, "#e54c62", net_now.sent .. " "))
-        netdowninfo:set_markup(markup.fontfg(theme.font, "#87af5f", net_now.received .. " "))
+        widget:set_markup(markup.fontfg(theme.font, theme.fg_normal, net_now.sent .. " up        "))
+        netdowninfo:set_markup(markup.fontfg(theme.font, theme.fg_normal, net_now.received .. " down, "))
     end
 })
 
 -- MEM
 local memory = lain.widget.mem({
     settings = function()
-        widget:set_markup(markup.fontfg(theme.font, "#e0da37", mem_now.used .. "M "))
+        widget:set_markup(markup.fontfg(theme.font, theme.fg_normal, "mem " .. mem_now.used .. "M        "))
     end
 })
 
@@ -149,22 +149,22 @@ theme.mpd = lain.widget.mpd({
 		cover_size = 64,
     settings = function()
         mpd_notification_preset = {
-        		font = "Helvetica Light 16",
+        		font = "Ricty 13",
             text = string.format("%s\n%s // %s", mpd_now.title,
                    mpd_now.artist, mpd_now.album)
         }
 
         if mpd_now.state == "play" then
-            artist = mpd_now.artist .. " > "
-            title  = mpd_now.title .. " "
+            artist = " " .. mpd_now.artist .. " // "
+            title  = mpd_now.title .. "        "
         elseif mpd_now.state == "pause" then
-            artist = "mpd "
-            title  = "paused "
+            artist = " mpd "
+            title  = "paused        "
         else
             artist = ""
             title  = ""
         end
-        widget:set_markup(markup.fontfg(theme.font, "#e54c62", artist) .. markup.fontfg(theme.font, "#b2b2b2", title))
+        widget:set_markup(markup.fontfg(theme.font, theme.fg_normal, artist) .. markup.fontfg(theme.font, theme.fg_focus, title))
     end
 })
 
@@ -208,15 +208,15 @@ function theme.at_screen_connect(s)
             layout = wibox.layout.fixed.horizontal,
             -- wibox.widget.systray(), -- this has yet to come in handy for me and breaks the immersion
             theme.mpd.widget,
-            netdowninfo,
-            netupinfo.widget,
             theme.volume.widget,
-            memory.widget,
-            cpu.widget,
-            theme.fs.widget,
-            theme.weather.widget,
+            -- netdowninfo,
+            -- netupinfo.widget,
+            -- memory.widget,
+            -- cpu.widget,
+            -- theme.fs.widget,
             temp.widget,
-            bat.widget,
+            -- theme.weather.widget,
+            -- bat.widget,
             mytextclock,
         },
     }
