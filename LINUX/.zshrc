@@ -21,7 +21,7 @@ fi
 source $HOME/.dynamic-colors/completions/dynamic-colors.zsh
 
 # prompt paradox (powerline theme)
-prompt paradox
+prompt minimal
 export EDITOR="vim"
 
 # export personal scripts (lock, ptpbw, etc)
