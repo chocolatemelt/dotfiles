@@ -42,9 +42,9 @@ URxvt*title: ターミナル
 rofi.color-enabled: true
 
 !                  bg       border   separator
-rofi.color-window: #32302f, #32302f, #a89984
+rofi.color-window: #1c1c1c, #1c1c1c, #a89984
 
 !                  bg       fg       bg-alt   hl-bg    hl-fg
-rofi.color-normal: #32302f, #ebdbb2, #32302f, #32302f, #ff8c00
-rofi.color-active: #d79921, #32302f, #d79921, #fabd2f, #32302f
-rofi.color-urgent: #cc241d, #32302f, #cc241d, #fb4934, #32302f
+rofi.color-normal: #1c1c1c, #ebdbb2, #1c1c1c, #1c1c1c, #ff8c00
+rofi.color-active: #d79921, #1c1c1c, #d79921, #fabd2f, #1c1c1c
+rofi.color-urgent: #cc241d, #1c1c1c, #cc241d, #fb4934, #1c1c1c

@@ -47,7 +47,7 @@ local markup = lain.util.markup
 
 -- Textclock
 os.setlocale(os.getenv("LANG")) -- to localize the clock
-local mytextclock = wibox.widget.textclock(markup(theme.fg_normal, "%a %d %b") .. " " .. markup(theme.fg_focus, "%H:%M "))
+local mytextclock = wibox.widget.textclock(markup(theme.fg_normal, "%a %d %b") .. " " .. markup(theme.fg_normal, "%H:%M "))
 mytextclock.font = theme.font
 
 -- Calendar
@@ -200,6 +200,7 @@ function theme.at_screen_connect(s)
             layout = wibox.layout.fixed.horizontal,
             --s.mylayoutbox,
             s.mytaglist,
+            theme.mpd.widget,
             s.mypromptbox,
         },
         --s.mytasklist, -- Middle widget
@@ -207,7 +208,6 @@ function theme.at_screen_connect(s)
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
             -- wibox.widget.systray(), -- this has yet to come in handy for me and breaks the immersion
-            theme.mpd.widget,
             theme.volume.widget,
             -- netdowninfo,
             -- netupinfo.widget,
