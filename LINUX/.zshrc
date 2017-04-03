@@ -79,6 +79,7 @@ alias rz='source ~/.zshrc' # shell reload after configuration changes
 alias ex='vim ~/.Xresources' # edit x stuff
 alias rx='xrdb ~/.Xresources' # reload x stuff
 alias ea='vim ~/.config/awesome/rc.lua' # edit awesome
+alias et='vim ~/.config/awesome/themes/personal/theme.lua' # edit awesome theme
 alias ev='vim ~/.vimrc' # edit vim
 
 alias google-chrome='google-chrome-stable'
