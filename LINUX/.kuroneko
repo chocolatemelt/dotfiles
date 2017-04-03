@@ -1,7 +1,8 @@
 # kuroneko-pc local dotfiles.
 
 #paths
-export PATH=/home/zhang/Git/LLVM-Compiler-Case-Study/build/bin:$PATH
+#export PATH=/home/zhang/Git/LLVM-Compiler-Case-Study/build/bin:$PATH
+export PATH=/usr/share/jdk1.8.0_121/bin:$PATH
 
 # aliases
 alias 6it='cd /home/zhang/Git'
