@@ -64,7 +64,6 @@ local modkey       = "Mod4"
 local altkey       = "Mod1"
 local terminal     = "urxvtc" or "xterm"
 local editor       = os.getenv("EDITOR") or "vim"
-local gui_editor   = "gvim"
 local browser      = "google-chrome-stable"
 
 awful.util.terminal = terminal
@@ -436,7 +435,6 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey }, "v", function () awful.spawn("xsel -b | xsel") end),
 
     -- User programs
-    awful.key({ modkey }, "e", function () awful.spawn(gui_editor) end),
     awful.key({ modkey }, "q", function () awful.spawn(browser) end),
 
     -- Default
