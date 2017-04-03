@@ -86,8 +86,8 @@ alias chrome='google-chrome'
 
 # print out the arch sysinfo for fun
 alias alsi='alsi -a'
-alias seungyeon='neofetch --w3m /home/zhang/Dropbox/Linux/neofetch.png --size 214px --gtk2 off'
-alias neofetch='neofetch --size 214px --gtk2 off'
+alias neofetch='neofetch --size 214px --gtk2 off --gtk3 off --block_range 0 16 --colors 4 7 4 4 4 7 --ascii_colors 4 4 4 4 4 4'
+alias seungyeon='neofetch --w3m /home/zhang/Dropbox/Linux/neofetch.png --size 214px'
 neofetch
 
 # stackoverflow.com/questions/171563/whats-in-your-zshrc
