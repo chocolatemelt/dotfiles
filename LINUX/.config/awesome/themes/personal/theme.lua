@@ -97,14 +97,16 @@ local temp = lain.widget.temp({
 
 -- Battery
 local bat = lain.widget.bat({
-	  battery = "BAT0",
+	  battery = "BAT*",
     settings = function()
 				local perc  = bat_now.perc ~= "N/A" and bat_now.perc .. "%" or bat_now.perc
         if bat_now.ac_status == 1 then
             perc = perc .. " plug"
         end
 
-        widget:set_markup(markup.fontfg(theme.font, theme.fg_normal, "bat " .. perc .. "        "))
+				if bat_now.perc ~= "N/A" then
+					widget:set_markup(markup.fontfg(theme.font, theme.fg_normal, "bat " .. perc .. "        "))
+				end
     end
 })
 
