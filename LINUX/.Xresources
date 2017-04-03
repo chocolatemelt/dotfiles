@@ -37,3 +37,14 @@ URxvt*color15: #ebdbb2
 !URxvt*font: xft:lucy tewi:pixelsize=11,xft:Inconsolata for Powerline:pixelsize=11,xft:DejaVu Sans Mono:style=Book,xft:Ricty,xft:Source Han Sans
 URxvt*font: xft:lucy tewi:pixelsize=11,xft:Inconsolata for Powerline,naga10,gulim12
 URxvt*title: ターミナル
+
+! rofi
+rofi.color-enabled: true
+
+!                  bg       border   separator
+rofi.color-window: #32302f, #32302f, #a89984
+
+!                  bg       fg       bg-alt   hl-bg    hl-fg
+rofi.color-normal: #32302f, #ebdbb2, #32302f, #32302f, #ff8c00
+rofi.color-active: #d79921, #32302f, #d79921, #fabd2f, #32302f
+rofi.color-urgent: #cc241d, #32302f, #cc241d, #fb4934, #32302f
