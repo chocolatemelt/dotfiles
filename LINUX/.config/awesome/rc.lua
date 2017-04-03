@@ -67,18 +67,19 @@ local editor       = os.getenv("EDITOR") or "vim"
 local browser      = "google-chrome-stable"
 
 awful.util.terminal = terminal
-awful.util.tagnames = { "一", "二", "三", "四", "五", "六", "七", "八", "九" }
+-- awful.util.tagnames = { "一", "二", "三", "四", "五", "六", "七", "八", "九" }
+awful.util.tagnames = { "東", "南", "西", "北" }
 awful.layout.layouts = {
     awful.layout.suit.floating,
     awful.layout.suit.tile.left,
-    awful.layout.suit.tile.top,
-    awful.layout.suit.tile.bottom,
-    awful.layout.suit.tile.top,
-    lain.layout.termfair,
-    awful.layout.suit.fair.horizontal,
+    -- awful.layout.suit.tile.top,
+    -- awful.layout.suit.tile.bottom,
+    -- awful.layout.suit.tile.top,
+    lain.layout.centerwork,
+    -- awful.layout.suit.fair.horizontal,
     awful.layout.suit.spiral,
-    awful.layout.suit.spiral.dwindle,
-    awful.layout.suit.max
+    -- awful.layout.suit.spiral.dwindle,
+    -- awful.layout.suit.max
 }
 awful.util.taglist_buttons = awful.util.table.join(
                     awful.button({ }, 1, function(t) t:view_only() end),

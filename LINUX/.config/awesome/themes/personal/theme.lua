@@ -155,11 +155,11 @@ theme.mpd = lain.widget.mpd({
         }
 
         if mpd_now.state == "play" then
-            artist = " " .. mpd_now.artist .. " // "
-            title  = mpd_now.title .. "        "
+            artist = "        " .. mpd_now.artist .. " // "
+            title  = mpd_now.title .. "         "
         elseif mpd_now.state == "pause" then
-            artist = " mpd "
-            title  = "paused        "
+            artist = "         mpd "
+            title  = "paused         "
         else
             artist = ""
             title  = ""
