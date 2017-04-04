@@ -71,7 +71,7 @@ awful.util.terminal = terminal
 awful.util.tagnames = { "東", "南", "西", "北" }
 awful.layout.layouts = {
     awful.layout.suit.floating,
-    awful.layout.suit.tile.left,
+    awful.layout.suit.tile.right,
     -- awful.layout.suit.tile.top,
     -- awful.layout.suit.tile.bottom,
     -- awful.layout.suit.tile.top,
