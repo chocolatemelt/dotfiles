@@ -35,6 +35,9 @@ Plugin 'morhetz/gruvbox'
 " Stop confirmation for C-family languages
 let g:ycm_confirm_extra_conf = 0
 
+" Find nearest compile_commands.json
+let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+
 " Airline configuration
 let g:airline_powerline_fonts = 1
 let g:airline_theme='wombat'

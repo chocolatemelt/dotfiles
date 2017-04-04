@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/home/zhang/Git/dotfiles/LINUX/chromebook'
+let g:netrw_dirhist_2='/home/zhang/.ncmpcpp'
+let g:netrw_dirhist_3='/home/zhang/Git/fe-cli'
+let g:netrw_dirhist_4='/home/zhang/Git/dotfiles/LINUX/.config/awesome/themes/personal'
+let g:netrw_dirhist_5='/usr/share/awesome/lib/beautiful'
+let g:netrw_dirhist_6='/home/zhang/Git/bdf-naga10-git'
+let g:netrw_dirhist_7='/home/zhang/Git/dotfiles/LINUX/.config/ranger'
+let g:netrw_dirhist_8='/home/zhang/Git/dotfiles/LINUX/.config/fontconfig'
+let g:netrw_dirhist_9='/home/zhang/Git/dotfiles/LINUX/.config/awesome/themes/personal'
