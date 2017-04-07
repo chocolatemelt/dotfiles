@@ -1,3 +1,6 @@
+# from https://jonasdevlieghere.com/a-better-youcompleteme-config/
+# ... because i can't be bothered
+
 import os
 import os.path
 import fnmatch
