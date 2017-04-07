@@ -8,5 +8,6 @@
 **/castawesome/
 **/discord/
 **/ranger/
-**/.vim/bundle/Vundle.vim
+**/.vim/bundle
+**/.vim/.netrwhist
 pavucontrol.ini
