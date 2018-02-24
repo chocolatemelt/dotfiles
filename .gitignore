@@ -9,6 +9,7 @@
 **/discord/
 **/ranger/
 **/Atom/
+**/configstore/
 **/.vim/bundle
 **/.vim/.netrwhist
 pavucontrol.ini

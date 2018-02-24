@@ -92,4 +92,7 @@ alias neofetch='neofetch --size 214px --gtk2 off --gtk3 off --block_range 0 16 -
 alias seungyeon='neofetch --w3m /home/zhang/Dropbox/Linux/neofetch.png --size 214px'
 neofetch
 
-# stackoverflow.com/questions/171563/whats-in-your-zshrc
+# nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
