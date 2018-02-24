@@ -13,3 +13,6 @@
 [submodule "LINUX/.zprezto"]
 	path = LINUX/.zprezto
 	url = https://github.com/chocolatemelt/prezto.git
+[submodule "LINUX/.nvm"]
+	path = LINUX/.nvm
+	url = https://github.com/creationix/nvm.git
