@@ -22,7 +22,8 @@ source $HOME/.dynamic-colors/completions/dynamic-colors.zsh
 
 # prompt paradox (powerline theme)
 prompt minimal
-export EDITOR="vim"
+export VISUAL=vim
+export EDITOR="$vim"
 
 # export personal scripts (lock, ptpbw, etc)
 export PATH=$PATH:$HOME/.scripts
@@ -73,7 +74,7 @@ alias syupdate='sudo pacman -Syu' # system upgrade
 alias pacro='sudo pacman -Rns $(pacman -Qtdq)' # remove orphaned packages
 alias pacopt='sudo pacman -Sc && sudo pacman-optimize && sync' # delete cache and optimize pacman !make sure packages are stable first!
 alias epitaph='journalctl -p 0..3 -xn' # shows critical system messages via journalctl
-alias startx='startx -- -keeptty -nolisten tcp > $HOME/.xorg.log 2>&1'
+alias startx='startx -- -keeptty -nolisten tcp >| $HOME/.xorg.log 2>&1'
 
 alias ez='vim ~/.zshrc' # change this file
 alias rz='source ~/.zshrc' # shell reload after configuration changes
@@ -91,8 +92,3 @@ alias alsi='alsi -a'
 alias neofetch='neofetch --size 214px --gtk2 off --gtk3 off --block_range 0 16 --colors 4 7 4 4 4 7 --ascii_colors 4 4 4 4 4 4'
 alias seungyeon='neofetch --w3m /home/zhang/Dropbox/Linux/neofetch.png --size 214px'
 neofetch
-
-# nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
