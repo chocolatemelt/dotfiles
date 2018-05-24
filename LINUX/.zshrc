@@ -28,6 +28,9 @@ export EDITOR="$vim"
 # export personal scripts (lock, ptpbw, etc)
 export PATH=$PATH:$HOME/.scripts
 
+# export npm globals
+export PATH=$PATH:$HOME/.npm/bin
+
 # export dynamic colors, color scripts, etc
 export PATH=$PATH:$HOME/.dynamic-colors/bin
 export PATH=$PATH:$HOME/.color-scripts/color-scripts
