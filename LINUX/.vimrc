@@ -103,7 +103,7 @@ set relativenumber
 
 " Right align current line number
 " NOTE: only works with -my- current vim build (see pulreq#680)
-set ra
+" set ra
 
 " Hide statusline because we're using airline
 set noshowmode
