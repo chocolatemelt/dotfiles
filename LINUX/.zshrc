@@ -75,7 +75,7 @@ alias vi='vim' # v(im)
 
 alias syupdate='sudo pacman -Syu' # system upgrade
 alias pacro='sudo pacman -Rns $(pacman -Qtdq)' # remove orphaned packages
-alias pacopt='sudo pacman -Sc && sudo pacman-optimize && sync' # delete cache and optimize pacman !make sure packages are stable first!
+alias pacopt='sudo pacman -Sc && sync' # delete cache and optimize pacman !make sure packages are stable first!
 alias epitaph='journalctl -p 0..3 -xn' # shows critical system messages via journalctl
 alias startx='startx -- -keeptty -nolisten tcp >| $HOME/.xorg.log 2>&1'
 
