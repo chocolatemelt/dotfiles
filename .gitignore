@@ -12,5 +12,6 @@
 **/configstore/
 **/.vim/bundle
 **/.vim/.netrwhist
+**/dconf/
 pavucontrol.ini
 error.log
