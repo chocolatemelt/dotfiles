@@ -73,7 +73,7 @@ awful.spawn.with_shell(
 
 -- {{{ Variable definitions
 
-local chosen_theme = "personal"
+local chosen_theme = "safu"
 local modkey       = "Mod4"
 local altkey       = "Mod1"
 local terminal     = "urxvtc"
@@ -516,13 +516,14 @@ globalkeys = my_table.join(
         {description = "show rofi", group = "launcher"}),
     --]]
     -- Prompt
-    awful.key({ modkey }, "r", function () awful.screen.focused().mypromptbox:run() end,
+    awful.key({ modkey, "Shift" }, "r", function () awful.screen.focused().mypromptbox:run() end,
               {description = "run prompt", group = "launcher"}),
+		awful.key({ modkey }, "r", function() awful.spawn.with_shell("rofi -show run -font \"lucy tewi 8\"") end),
 
     awful.key({ modkey }, "x",
               function ()
                   awful.prompt.run {
-                    prompt       = "Run Lua code: ",
+                    prompt       = "  lua: ",
                     textbox      = awful.screen.focused().mypromptbox.widget,
                     exe_callback = awful.util.eval,
                     history_path = awful.util.get_cache_dir() .. "/history_eval"
