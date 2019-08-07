@@ -11,6 +11,15 @@ URxvt*scrollBar: false
 URxvt*mouseWheelScrollPage: false
 URxvt*iso14755: false
 
+! rxvt perls
+URxvt.perl-ext-common: clipboard,keyboard-select
+URxvt.keyboard-select.clipboard: true
+URxvt.clipboard.autocopy: true
+! alt-esc begins vi-like selection functionality
+! alt-s begins keyboard-select in backward search mode
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+URxvt.keysym.M-s: perl:keyboard-select:search
+
 ! xterm (if I ever use it again...)
 xterm*faceName: Source Code Pro for Powerline, Light:size=10:antialias=true
 xterm*faceNameDoublesize: Ricty:size=11:antialias=true
@@ -36,11 +45,13 @@ URxvt*color13: #d3869b
 URxvt*color14: #8ec07c
 URxvt*color15: #ebdbb2
 !URxvt*font: xft:lucy tewi:pixelsize=11,xft:Inconsolata for Powerline:pixelsize=11,xft:DejaVu Sans Mono:style=Book,xft:Ricty,xft:Source Han Sans
-URxvt*font: xft:lucy tewi:pixelsize=11,xft:Inconsolata for Powerline,naga10,gulim12
-URxvt*title: ターミナル
+!URxvt*font: xft:lucy tewi:pixelsize=11,xft:Inconsolata for Powerline,naga10,gulim12
+URxvt*font: xft:Fira Code:style=Retina:size=11:antialias=true:hinting=true,xft:Ricty
+URxvt*title: ターミナ
 
 ! rofi
 rofi.color-enabled: true
+rofi.font: Fira Code Retina 16
 
 !                  bg       border   separator
 rofi.color-window: #1c1c1c, #1c1c1c, #a89984
