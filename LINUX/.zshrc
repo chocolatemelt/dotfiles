@@ -10,9 +10,7 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Source powershell config script
-if [[ -r /usr/lib/python3.4/site-packages/powerline/bindings/zsh/powerline.zsh ]]; then
-    source /usr/lib/python3.4/site-packages/powerline/bindings/zsh/powerline.zsh
-fi
+# source /usr/share/zsh/site-contrib/powerline.zsh
 
 # Source fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
