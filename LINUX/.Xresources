@@ -51,7 +51,6 @@ URxvt*title: ターミナ
 
 ! rofi
 rofi.color-enabled: true
-rofi.font: Fira Code Retina 16
 
 !                  bg       border   separator
 rofi.color-window: #1c1c1c, #1c1c1c, #a89984
