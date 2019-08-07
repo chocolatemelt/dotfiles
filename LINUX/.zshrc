@@ -82,8 +82,9 @@ alias rz='source ~/.zshrc' # shell reload after configuration changes
 alias ex='vim ~/.Xresources' # edit x stuff
 alias rx='xrdb -merge ~/.Xresources' # reload x stuff
 alias ea='vim ~/.config/awesome/rc.lua' # edit awesome
-alias et='vim ~/.config/awesome/themes/personal/theme.lua' # edit awesome theme
 alias ev='vim ~/.vimrc' # edit vim
+
+alias fuzzy='find . -type f | fzf'
 
 alias google-chrome='google-chrome-stable'
 alias chrome='google-chrome'
@@ -91,5 +92,4 @@ alias chrome='google-chrome'
 # print out the arch sysinfo for fun
 alias alsi='alsi -a'
 alias neofetch='neofetch --size 214px --gtk2 off --gtk3 off --block_range 0 16 --colors 4 7 4 4 4 7 --ascii_colors 4 4 4 4 4 4'
-alias seungyeon='neofetch --w3m /home/zhang/Dropbox/Linux/neofetch.png --size 214px'
 neofetch

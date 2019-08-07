@@ -13,3 +13,5 @@ alias cdrive='sudo ntfs-3g /dev/sda3 /media/c'
 alias undrive='sudo umount /media/c'
 alias windows='sudo ntfs-3g /dev/sdb2 /media/d'
 alias unwindows='sudo umount /media/d'
+
+alias seungyeon='neofetch --w3m /home/zhang/Dropbox/Linux/neofetch.png --size 214px'
