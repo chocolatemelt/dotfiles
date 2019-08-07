@@ -1,3 +1,4 @@
 alias 6it='cd /home/zhang/Git'
-alias sup='neofetch --w3m /home/zhang/Pictures/profile.png --size 600px'
+alias sup='neofetch --w3m /home/zhang/Pictures/profile.png --size 400px'
 sup
+
