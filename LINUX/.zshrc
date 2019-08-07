@@ -1,9 +1,5 @@
 # Main zshrc file.
 
-# Source local dotfiles
-HOSTNAME=$(hostname)
-source "$HOME/.$HOSTNAME"
-
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
@@ -92,4 +88,7 @@ alias chrome='google-chrome'
 # print out the arch sysinfo for fun
 alias alsi='alsi -a'
 alias neofetch='neofetch --size 214px --gtk2 off --gtk3 off --block_range 0 16 --colors 4 7 4 4 4 7 --ascii_colors 4 4 4 4 4 4'
-neofetch
+
+# Source local dotfiles last for any system-specific scripts
+HOSTNAME=$(hostname)
+source "$HOME/.$HOSTNAME"
