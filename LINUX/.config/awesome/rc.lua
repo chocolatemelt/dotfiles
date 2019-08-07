@@ -87,10 +87,14 @@ awful.util.terminal = terminal
 awful.util.tagnames = { "東", "南", "西", "北" }
 awful.layout.layouts = {
     awful.layout.suit.floating,
-    awful.layout.suit.tile,
+    awful.layout.suit.tile.right,
+    awful.layout.suit.spiral,
     awful.layout.suit.tile.left,
-    awful.layout.suit.tile.bottom,
-    awful.layout.suit.tile.top,
+    --awful.layout.suit.floating,
+    --awful.layout.suit.tile,
+    --awful.layout.suit.tile.left,
+    --awful.layout.suit.tile.bottom,
+    --awful.layout.suit.tile.top,
     --awful.layout.suit.fair,
     --awful.layout.suit.fair.horizontal,
     --awful.layout.suit.spiral,
@@ -412,62 +416,84 @@ globalkeys = my_table.join(
               {description = "-10%", group = "hotkeys"}),
 
     -- ALSA volume control
+    awful.key({}, "XF86AudioRaiseVolume",
+        function ()
+            os.execute(string.format("amixer set %s 1%%+", beautiful.volume.channel))
+            beautiful.volume.update()
+        end),
+    awful.key({}, "XF86AudioLowerVolume",
+        function ()
+            os.execute(string.format("amixer set %s 1%%-", beautiful.volume.channel))
+            beautiful.volume.update()
+        end),
+    awful.key({}, "XF86AudioMute",
+        function ()
+            os.execute(string.format("amixer set %s toggle", beautiful.volume.togglechannel or beautiful.volume.channel))
+            beautiful.volume.update()
+				end),
     awful.key({ altkey }, "Up",
         function ()
-            os.execute(string.format("amixer -q set %s 1%%+", beautiful.volume.channel))
+            os.execute(string.format("amixer set %s 1%%+", beautiful.volume.channel))
             beautiful.volume.update()
-        end,
-        {description = "volume up", group = "hotkeys"}),
+        end),
     awful.key({ altkey }, "Down",
         function ()
-            os.execute(string.format("amixer -q set %s 1%%-", beautiful.volume.channel))
+            os.execute(string.format("amixer set %s 1%%-", beautiful.volume.channel))
             beautiful.volume.update()
-        end,
-        {description = "volume down", group = "hotkeys"}),
+        end),
     awful.key({ altkey }, "m",
         function ()
-            os.execute(string.format("amixer -q set %s toggle", beautiful.volume.togglechannel or beautiful.volume.channel))
+            os.execute(string.format("amixer set %s toggle", beautiful.volume.togglechannel or beautiful.volume.channel))
             beautiful.volume.update()
-        end,
-        {description = "toggle mute", group = "hotkeys"}),
+        end),
     awful.key({ altkey, "Control" }, "m",
         function ()
-            os.execute(string.format("amixer -q set %s 100%%", beautiful.volume.channel))
+            os.execute(string.format("amixer set %s 100%%", beautiful.volume.channel))
             beautiful.volume.update()
-        end,
-        {description = "volume 100%", group = "hotkeys"}),
-    awful.key({ altkey, "Control" }, "0",
-        function ()
-            os.execute(string.format("amixer -q set %s 0%%", beautiful.volume.channel))
-            beautiful.volume.update()
-        end,
-        {description = "volume 0%", group = "hotkeys"}),
+        end),
+
+		awful.key({ altkey, "Control" }, "0",
+				function ()
+						os.execute(string.format("amixer -q set %s 0%%", beautiful.volume.channel))
+						beautiful.volume.update()
+				end),
 
     -- MPD control
+    awful.key({}, "XF86AudioPlay",
+        function ()
+            awful.spawn.with_shell("mpc toggle")
+            beautiful.mpd.update()
+        end),
+    awful.key({}, "XF86AudioPrev",
+        function ()
+            awful.spawn.with_shell("mpc prev")
+            beautiful.mpd.update()
+        end),
+    awful.key({}, "XF86AudioNext",
+        function ()
+            awful.spawn.with_shell("mpc next")
+            beautiful.mpd.update()
+        end),
     awful.key({ altkey, "Control" }, "Up",
         function ()
-            os.execute("mpc toggle")
+            awful.spawn.with_shell("mpc toggle")
             beautiful.mpd.update()
-        end,
-        {description = "mpc toggle", group = "widgets"}),
+        end),
     awful.key({ altkey, "Control" }, "Down",
         function ()
-            os.execute("mpc stop")
+            awful.spawn.with_shell("mpc stop")
             beautiful.mpd.update()
-        end,
-        {description = "mpc stop", group = "widgets"}),
+        end),
     awful.key({ altkey, "Control" }, "Left",
         function ()
-            os.execute("mpc prev")
+            awful.spawn.with_shell("mpc prev")
             beautiful.mpd.update()
-        end,
-        {description = "mpc prev", group = "widgets"}),
+        end),
     awful.key({ altkey, "Control" }, "Right",
         function ()
-            os.execute("mpc next")
+            awful.spawn.with_shell("mpc next")
             beautiful.mpd.update()
-        end,
-        {description = "mpc next", group = "widgets"}),
+        end),
     awful.key({ altkey }, "0",
         function ()
             local common = { text = "MPD widget ", position = "top_middle", timeout = 2 }
@@ -479,8 +505,7 @@ globalkeys = my_table.join(
                 common.text = common.text .. lain.util.markup.bold("ON")
             end
             naughty.notify(common)
-        end,
-        {description = "mpc on/off", group = "widgets"}),
+        end),
 
     -- Copy primary to clipboard (terminals to gtk)
     awful.key({ modkey }, "c", function () awful.spawn.with_shell("xsel | xsel -i -b") end,
@@ -488,6 +513,12 @@ globalkeys = my_table.join(
     -- Copy clipboard to primary (gtk to terminals)
     awful.key({ modkey }, "v", function () awful.spawn.with_shell("xsel -b | xsel") end,
               {description = "copy gtk to terminal", group = "hotkeys"}),
+
+    -- Scrot hotkeys
+    awful.key({ altkey, "Control" }, "4", function () awful.spawn("pbs") end,
+              {description = "scrot region and send to clipboard", group = "hotkeys"}),
+    awful.key({ altkey, "Control" }, "5", function () awful.spawn("pbx") end,
+              {description = "scrot and send to clipboard", group = "hotkeys"}),
 
     -- User programs
     awful.key({ modkey }, "q", function () awful.spawn(browser) end,
@@ -519,7 +550,7 @@ globalkeys = my_table.join(
     -- Prompt
     awful.key({ modkey, "Shift" }, "r", function () awful.screen.focused().mypromptbox:run() end,
               {description = "run prompt", group = "launcher"}),
-		awful.key({ modkey }, "r", function() awful.spawn.with_shell("rofi -show run -font \"lucy tewi 8\"") end),
+		awful.key({ modkey }, "r", function() awful.spawn.with_shell("rofi -show run") end),
 
     awful.key({ modkey }, "x",
               function ()
@@ -734,7 +765,7 @@ client.connect_signal("request::titlebars", function(c)
     --         layout = wibox.layout.fixed.horizontal()
     --     },
     --     layout = wibox.layout.align.horizontal
-    awful.titlebar(c, {size = 16}) : setup {
+    awful.titlebar(c, {size = dpi(16)}) : setup {
         { -- Left
             awful.titlebar.widget.iconwidget(c),
             buttons = buttons,
@@ -756,9 +787,9 @@ client.connect_signal("request::titlebars", function(c)
 end)
 
 -- Enable sloppy focus, so that focus follows mouse.
-client.connect_signal("mouse::enter", function(c)
-    c:emit_signal("request::activate", "mouse_enter", {raise = true})
-end)
+-- client.connect_signal("mouse::enter", function(c)
+--     c:emit_signal("request::activate", "mouse_enter", {raise = true})
+-- end)
 
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)

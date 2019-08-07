@@ -17,14 +17,14 @@ local my_table = awful.util.table or gears.table -- 4.{0,1} compatibility
 local theme                                     = {}
 theme.confdir                                   = os.getenv("HOME") .. "/.config/awesome/themes/safu"
 theme.wallpaper                                 = theme.confdir .. "/wall.png"
-theme.font                                      = "xos4 Terminus 10"
+theme.font                                      = "Ricty 10"
 theme.menu_bg_normal                            = "#000000"
 theme.menu_bg_focus                             = "#000000"
 theme.bg_normal                                 = "#000000"
 theme.bg_focus                                  = "#000000"
 theme.bg_urgent                                 = "#000000"
 theme.fg_normal                                 = "#aaaaaa"
-theme.fg_focus                                  = "#ff8c00"
+theme.fg_focus                                  = "#80d9d8" --"#ff8c00"
 theme.fg_urgent                                 = "#af1d18"
 theme.fg_minimize                               = "#ffffff"
 theme.border_width                              = dpi(1)
@@ -35,7 +35,7 @@ theme.menu_border_width                         = 0
 theme.menu_width                                = dpi(130)
 theme.menu_submenu_icon                         = theme.confdir .. "/icons/submenu.png"
 theme.menu_fg_normal                            = "#aaaaaa"
-theme.menu_fg_focus                             = "#ff8c00"
+theme.menu_fg_focus                             = "#80d9d8" --"#ff8c00"
 theme.menu_bg_normal                            = "#050505dd"
 theme.menu_bg_focus                             = "#050505dd"
 theme.widget_temp                               = theme.confdir .. "/icons/temp.png"
@@ -57,19 +57,19 @@ theme.taglist_squares_unsel                     = theme.confdir .. "/icons/squar
 theme.tasklist_plain_task_name                  = true
 theme.tasklist_disable_icon                     = true
 theme.useless_gap                               = 0
-theme.layout_tile                               = theme.confdir .. "/icons/tile.png"
-theme.layout_tilegaps                           = theme.confdir .. "/icons/tilegaps.png"
-theme.layout_tileleft                           = theme.confdir .. "/icons/tileleft.png"
-theme.layout_tilebottom                         = theme.confdir .. "/icons/tilebottom.png"
-theme.layout_tiletop                            = theme.confdir .. "/icons/tiletop.png"
-theme.layout_fairv                              = theme.confdir .. "/icons/fairv.png"
-theme.layout_fairh                              = theme.confdir .. "/icons/fairh.png"
-theme.layout_spiral                             = theme.confdir .. "/icons/spiral.png"
-theme.layout_dwindle                            = theme.confdir .. "/icons/dwindle.png"
-theme.layout_max                                = theme.confdir .. "/icons/max.png"
-theme.layout_fullscreen                         = theme.confdir .. "/icons/fullscreen.png"
-theme.layout_magnifier                          = theme.confdir .. "/icons/magnifier.png"
-theme.layout_floating                           = theme.confdir .. "/icons/floating.png"
+-- theme.layout_tile                               = theme.confdir .. "/icons/tile.png"
+-- theme.layout_tilegaps                           = theme.confdir .. "/icons/tilegaps.png"
+-- theme.layout_tileleft                           = theme.confdir .. "/icons/tileleft.png"
+-- theme.layout_tilebottom                         = theme.confdir .. "/icons/tilebottom.png"
+-- theme.layout_tiletop                            = theme.confdir .. "/icons/tiletop.png"
+-- theme.layout_fairv                              = theme.confdir .. "/icons/fairv.png"
+-- theme.layout_fairh                              = theme.confdir .. "/icons/fairh.png"
+-- theme.layout_spiral                             = theme.confdir .. "/icons/spiral.png"
+-- theme.layout_dwindle                            = theme.confdir .. "/icons/dwindle.png"
+-- theme.layout_max                                = theme.confdir .. "/icons/max.png"
+-- theme.layout_fullscreen                         = theme.confdir .. "/icons/fullscreen.png"
+-- theme.layout_magnifier                          = theme.confdir .. "/icons/magnifier.png"
+-- theme.layout_floating                           = theme.confdir .. "/icons/floating.png"
 theme.titlebar_close_button_normal              = theme.confdir .. "/icons/titlebar/close_normal.png"
 theme.titlebar_close_button_focus               = theme.confdir .. "/icons/titlebar/close_focus.png"
 theme.titlebar_minimize_button_normal           = theme.confdir .. "/icons/titlebar/minimize_normal.png"
@@ -102,7 +102,7 @@ mytextclock.font = theme.font
 theme.cal = lain.widget.cal({
     attach_to = { mytextclock },
     notification_preset = {
-        font = "lucy tewi 8",
+        font = "Ricty 8",
         fg   = theme.fg_normal,
         bg   = theme.bg_normal
     }
@@ -111,7 +111,7 @@ theme.cal = lain.widget.cal({
 -- Weather
 theme.weather = lain.widget.weather({
     city_id = 4930956, -- boston
-    notification_preset = { font = "xos4 Terminus 10", fg = theme.fg_normal },
+    notification_preset = { font = theme.font, fg = theme.fg_normal },
     weather_na_markup = markup.fontfg(theme.font, theme.fg_normal, "N/A "),
     settings = function()
         descr = weather_now["weather"][1]["description"]:lower()
@@ -121,12 +121,12 @@ theme.weather = lain.widget.weather({
 })
 
 -- / fs
---[[ commented because it needs Gio/Glib >= 2.54
+-- commented because it needs Gio/Glib >= 2.54
 local fsicon = wibox.widget.imagebox(theme.widget_fs)
 theme.fs = lain.widget.fs({
-    notification_preset = { font = "xos4 Terminus 10", fg = theme.fg_normal },
+    notification_preset = { font = theme.font, fg = theme.fg_normal },
     settings  = function()
-        widget:set_markup(markup.fontfg(theme.font, "#80d9d8", string.format("%.1f", fs_now["/"].used) .. "% "))
+        widget:set_markup(markup.fontfg(theme.font, theme.fg_normal, string.format("fs %.1f", fs_now["/"].used) .. "%        "))
     end
 })
 --]]
@@ -301,7 +301,7 @@ function theme.at_screen_connect(s)
             memory.widget,
             cpu.widget,
             --fsicon,
-            --theme.fs.widget,
+            theme.fs.widget,
             theme.weather.widget,
             temp.widget,
             bat.widget,
