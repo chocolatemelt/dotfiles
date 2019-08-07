@@ -13,5 +13,6 @@
 **/.vim/bundle
 **/.vim/.netrwhist
 **/dconf/
+**/rofi/config
 pavucontrol.ini
 error.log
