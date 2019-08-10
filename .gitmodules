@@ -10,3 +10,6 @@
 [submodule "LINUX/.zprezto"]
 	path = LINUX/.zprezto
 	url = https://github.com/chocolatemelt/prezto.git
+[submodule "LINUX/.config/awesome/lain"]
+	path = LINUX/.config/awesome/lain
+	url = https://github.com/lcpz/lain.git
