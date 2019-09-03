@@ -12,5 +12,9 @@
 **/configstore/
 **/.vim/bundle
 **/.vim/.netrwhist
+**/xfce4/
+**/qBittorrent/
+**/obs-studio/logs/
+**/obs-studio/profiler-data/
 pavucontrol.ini
 error.log

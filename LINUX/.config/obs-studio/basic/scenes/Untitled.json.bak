@@ -13,7 +13,7 @@
         "id": "pulse_input_capture",
         "mixers": 255,
         "monitoring_type": 0,
-        "muted": false,
+        "muted": true,
         "name": "Mic/Aux",
         "private_settings": {},
         "push-to-mute": false,
@@ -21,7 +21,7 @@
         "push-to-talk": false,
         "push-to-talk-delay": 0,
         "settings": {
-            "device_id": "default"
+            "device_id": "alsa_input.usb-Burr-Brown_from_TI_USB_Audio_CODEC-00.analog-stereo"
         },
         "sync": 0,
         "volume": 1.0
@@ -48,14 +48,15 @@
         "push-to-talk": false,
         "push-to-talk-delay": 0,
         "settings": {
-            "device_id": "default"
+            "device_id": "alsa_output.usb-FiiO_DigiHug_USB_Audio-01.analog-stereo.monitor"
         },
         "sync": 0,
         "volume": 1.0
     },
-    "current_program_scene": "Scene",
-    "current_scene": "Scene",
+    "current_program_scene": "programming",
+    "current_scene": "programming",
     "current_transition": "Fade",
+    "groups": [],
     "modules": {},
     "name": "Untitled",
     "preview_locked": false,
@@ -73,134 +74,7 @@
             "name": "Fade"
         }
     ],
-    "saved_multiview_projectors": [
-        {
-            "saved_multiview_projectors": 0
-        },
-        {
-            "saved_multiview_projectors": 0
-        },
-        {
-            "saved_multiview_projectors": 0
-        },
-        {
-            "saved_multiview_projectors": 0
-        },
-        {
-            "saved_multiview_projectors": 0
-        },
-        {
-            "saved_multiview_projectors": 0
-        },
-        {
-            "saved_multiview_projectors": 0
-        },
-        {
-            "saved_multiview_projectors": 0
-        },
-        {
-            "saved_multiview_projectors": 0
-        },
-        {
-            "saved_multiview_projectors": 0
-        }
-    ],
-    "saved_preview_projectors": [
-        {
-            "saved_preview_projectors": 0
-        },
-        {
-            "saved_preview_projectors": 0
-        },
-        {
-            "saved_preview_projectors": 0
-        },
-        {
-            "saved_preview_projectors": 0
-        },
-        {
-            "saved_preview_projectors": 0
-        },
-        {
-            "saved_preview_projectors": 0
-        },
-        {
-            "saved_preview_projectors": 0
-        },
-        {
-            "saved_preview_projectors": 0
-        },
-        {
-            "saved_preview_projectors": 0
-        },
-        {
-            "saved_preview_projectors": 0
-        }
-    ],
-    "saved_projectors": [
-        {
-            "saved_projectors": ""
-        },
-        {
-            "saved_projectors": ""
-        },
-        {
-            "saved_projectors": ""
-        },
-        {
-            "saved_projectors": ""
-        },
-        {
-            "saved_projectors": ""
-        },
-        {
-            "saved_projectors": ""
-        },
-        {
-            "saved_projectors": ""
-        },
-        {
-            "saved_projectors": ""
-        },
-        {
-            "saved_projectors": ""
-        },
-        {
-            "saved_projectors": ""
-        }
-    ],
-    "saved_studio_preview_projectors": [
-        {
-            "saved_studio_preview_projectors": 0
-        },
-        {
-            "saved_studio_preview_projectors": 0
-        },
-        {
-            "saved_studio_preview_projectors": 0
-        },
-        {
-            "saved_studio_preview_projectors": 0
-        },
-        {
-            "saved_studio_preview_projectors": 0
-        },
-        {
-            "saved_studio_preview_projectors": 0
-        },
-        {
-            "saved_studio_preview_projectors": 0
-        },
-        {
-            "saved_studio_preview_projectors": 0
-        },
-        {
-            "saved_studio_preview_projectors": 0
-        },
-        {
-            "saved_studio_preview_projectors": 0
-        }
-    ],
+    "saved_projectors": [],
     "scaling_enabled": false,
     "scaling_level": 0,
     "scaling_off_x": 0.0,
@@ -208,6 +82,9 @@
     "scene_order": [
         {
             "name": "Scene"
+        },
+        {
+            "name": "programming"
         }
     ],
     "sources": [
@@ -216,8 +93,198 @@
             "deinterlace_mode": 0,
             "enabled": true,
             "flags": 0,
+            "hotkeys": {},
+            "id": "xcomposite_input",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "jump",
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "capture_window": "8388609\r\nsxiv - /home/zhang/Downloads/jump.gif\r\nsxiv"
+            },
+            "sync": 0,
+            "volume": 1.0
+        },
+        {
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {},
+            "id": "xcomposite_input",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "cava",
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "capture_window": "46137385\r\ncava\r\nurxvt",
+                "show_cursor": false,
+                "swap_redblue": false
+            },
+            "sync": 0,
+            "volume": 1.0
+        },
+        {
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {},
+            "id": "xshm_input",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "primary",
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "screen": 1
+            },
+            "sync": 0,
+            "volume": 1.0
+        },
+        {
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
             "hotkeys": {
-                "OBSBasic.SelectScene": []
+                "OBSBasic.SelectScene": [],
+                "libobs.hide_scene_item.cava": [],
+                "libobs.hide_scene_item.jump": [],
+                "libobs.hide_scene_item.primary": [],
+                "libobs.show_scene_item.cava": [],
+                "libobs.show_scene_item.jump": [],
+                "libobs.show_scene_item.primary": []
+            },
+            "id": "scene",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "programming",
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "custom_size": false,
+                "id_counter": 3,
+                "items": [
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 1,
+                        "locked": false,
+                        "name": "primary",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 2,
+                        "locked": false,
+                        "name": "cava",
+                        "pos": {
+                            "x": 2098.0,
+                            "y": 84.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 0.79127132892608643,
+                            "y": 0.79057592153549194
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 3,
+                        "locked": false,
+                        "name": "jump",
+                        "pos": {
+                            "x": 2404.0,
+                            "y": 1228.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    }
+                ]
+            },
+            "sync": 0,
+            "volume": 1.0
+        },
+        {
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {
+                "OBSBasic.SelectScene": [],
+                "libobs.hide_scene_item.Minecraft": [],
+                "libobs.show_scene_item.Minecraft": []
             },
             "id": "scene",
             "mixers": 0,
@@ -230,8 +297,61 @@
             "push-to-talk": false,
             "push-to-talk-delay": 0,
             "settings": {
-                "id_counter": 0,
-                "items": []
+                "custom_size": false,
+                "id_counter": 1,
+                "items": [
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 1,
+                        "locked": false,
+                        "name": "Minecraft",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.3333333730697632,
+                            "y": 1.3333333730697632
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    }
+                ]
+            },
+            "sync": 0,
+            "volume": 1.0
+        },
+        {
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {},
+            "id": "xcomposite_input",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "Minecraft",
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "capture_window": "65011714\r\nMinecraft 1.12.2\r\nMinecraft 1.12.2"
             },
             "sync": 0,
             "volume": 1.0
