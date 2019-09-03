@@ -16,5 +16,7 @@
 **/qBittorrent/
 **/obs-studio/logs/
 **/obs-studio/profiler-data/
+**/dconf/
+**/rofi/config
 pavucontrol.ini
 error.log

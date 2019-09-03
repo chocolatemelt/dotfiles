@@ -7,12 +7,9 @@
 [submodule "LINUX/.dynamic-colors"]
 	path = LINUX/.dynamic-colors
 	url = https://github.com/chocolatemelt/dynamic-colors
-[submodule "LINUX/.config/awesome/lain"]
-	path = LINUX/.config/awesome/lain
-	url = https://github.com/copycat-killer/lain.git
 [submodule "LINUX/.zprezto"]
 	path = LINUX/.zprezto
 	url = https://github.com/chocolatemelt/prezto.git
-[submodule "LINUX/.nvm"]
-	path = LINUX/.nvm
-	url = https://github.com/creationix/nvm.git
+[submodule "LINUX/.config/awesome/lain"]
+	path = LINUX/.config/awesome/lain
+	url = https://github.com/lcpz/lain.git

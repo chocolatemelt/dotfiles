@@ -1,0 +1,10 @@
+rofi.color-enabled: true
+rofi.font: Fira Code Retina 16
+
+!                  bg       border   separator
+rofi.color-window: #1c1c1c, #1c1c1c, #a89984
+
+!                  bg       fg       bg-alt   hl-bg    hl-fg
+rofi.color-normal: #1c1c1c, #e6eaeb, #1c1c1c, #1c1c1c, #80d9d8
+rofi.color-active: #d5f0eb, #1c1c1c, #d5f0eb, #80d9d8, #1c1c1c
+rofi.color-urgent: #cc241d, #1c1c1c, #cc241d, #fb4934, #1c1c1c

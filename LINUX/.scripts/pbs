@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
-scrot -s /tmp/$$.png
-pb /tmp/$$.png
+# scrot -s /tmp/screenshot-$(date +%F_%T).png -e 'xclip -selection c -t image/png < $f'
+\gm import /tmp/$$.png
+xclip -selection c -t image/png < /tmp/$$.png

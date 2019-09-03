@@ -1,5 +1,4 @@
-*nix dotfiles
-=============
+# \*nix dotfiles
 
 To force symlink all dotfiles:
-```$ ln -sf <full directory to dotfiles>/.* ~```
+`$ ln -sf <full directory to dotfiles>/.* ~`
