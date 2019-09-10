@@ -20,3 +20,5 @@
 **/rofi/config
 pavucontrol.ini
 error.log
+.Xresources
+rc.lua
