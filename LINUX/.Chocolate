@@ -1,0 +1,4 @@
+export PATH=$PATH:/mnt/d/Program\ Files/FFmpeg/bin
+
+alias 6it='cd /mnt/c/Users/Kevin/Git'
+
