@@ -19,6 +19,7 @@
 **/dconf/
 **/rofi/config
 **/Code\ -\ OSS/
+**/.local
 pavucontrol.ini
 error.log
 .Xresources

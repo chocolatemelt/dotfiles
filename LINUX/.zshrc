@@ -19,6 +19,9 @@ prompt minimal
 export VISUAL=vim
 export EDITOR="$vim"
 
+# export local binaries (pip, etc)
+export PATH=$PATH:$HOME/.local/bin
+
 # export personal scripts (lock, ptpbw, etc)
 export PATH=$PATH:$HOME/.scripts
 
