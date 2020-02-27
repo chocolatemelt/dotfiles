@@ -18,6 +18,7 @@
 **/obs-studio/profiler-data/
 **/dconf/
 **/rofi/config
+**/Code\ -\ OSS/
 pavucontrol.ini
 error.log
 .Xresources
