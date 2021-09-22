@@ -12,5 +12,16 @@
 **/configstore/
 **/.vim/bundle
 **/.vim/.netrwhist
+**/xfce4/
+**/qBittorrent/
+**/obs-studio/logs/
+**/obs-studio/profiler-data/
+**/dconf/
+**/rofi/config
+**/Code\ -\ OSS/
+**/.local
 pavucontrol.ini
 error.log
+.Xresources
+rc.lua
+.nvm

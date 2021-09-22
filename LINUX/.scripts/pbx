@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
-\gm import -window root /tmp/$$.png
-pb /tmp/$$.png
+# \gm import -window root /tmp/$$.png
+# pb /tmp/$$.png
+scrot /tmp/screenshot-$(date +%F_%T).png -e 'xclip -selection c -t image/png < $f'
+

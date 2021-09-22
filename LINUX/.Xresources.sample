@@ -1,0 +1,64 @@
+! xft
+Xft*antialias: 1
+Xft*hinting: 1
+Xft*hintstyle: hintslight
+Xft*rgba: rgb
+Xft*lcdfilter: lcddefault
+
+! rxvt
+URxvt.internalBorder: 20
+URxvt.scrollBar: false
+URxvt.mouseWheelScrollPage: false
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+
+! rxvt perls
+URxvt.perl-ext-common: default,clipboard,url-select,keyboard-select,selection-to-clipboard
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+URxvt.url-select.launcher: firefox
+URxvt.keyboard-select.clipboard: true
+URxvt.clipboard.autocopy: true
+! alt-esc begins vi-like selection functionality
+! alt-s begins keyboard-select in backward search mode
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+URxvt.keysym.M-s: perl:keyboard-select:search
+
+! xterm (if I ever use it again...)
+xterm*faceName: Source Code Pro for Powerline, Light:size=10:antialias=true
+xterm*faceNameDoublesize: Ricty:size=11:antialias=true
+xterm*font: 7x13
+
+! Gruvbox theme
+URxvt*background: #1c1c1c
+URxvt*foreground: #fbd1c7
+URxvt*color0: #282828
+URxvt*color1: #cc241d
+URxvt*color2: #98971a
+URxvt*color3: #d79921
+URxvt*color4: #458588
+URxvt*color5: #b16286
+URxvt*color6: #689d6a
+URxvt*color7: #a89984
+URxvt*color8: #928374
+URxvt*color9: #fb4934
+URxvt*color10: #b8bb26
+URxvt*color11: #fabd2f
+URxvt*color12: #83a598
+URxvt*color13: #d3869b
+URxvt*color14: #8ec07c
+URxvt*color15: #ebdbb2
+URxvt*font: xft:lucy tewi:pixelsize=11,xft:Inconsolata for Powerline:pixelsize=11,xft:DejaVu Sans Mono:style=Book,xft:Ricty,xft:Source Han Sans
+!URxvt*font: xft:lucy tewi:pixelsize=11,xft:Inconsolata for Powerline,naga10,gulim12
+!URxvt*font: xft:Fira Code:style=Retina:size=8:antialias=true:hinting=true,xft:Ricty
+URxvt*title: ターミナ
+
+! rofi
+rofi.color-enabled: true
+
+!                  bg       border   separator
+rofi.color-window: #1c1c1c, #1c1c1c, #a89984
+
+!                  bg       fg       bg-alt   hl-bg    hl-fg
+rofi.color-normal: #1c1c1c, #ebdbb2, #1c1c1c, #1c1c1c, #ff8c00
+rofi.color-active: #d79921, #1c1c1c, #d79921, #fabd2f, #1c1c1c
+rofi.color-urgent: #cc241d, #1c1c1c, #cc241d, #fb4934, #1c1c1c

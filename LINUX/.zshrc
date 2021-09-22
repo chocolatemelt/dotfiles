@@ -1,18 +1,12 @@
 # Main zshrc file.
 
-# Source local dotfiles
-HOSTNAME=$(hostname)
-source "$HOME/.$HOSTNAME"
-
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
 # Source powershell config script
-if [[ -r /usr/lib/python3.4/site-packages/powerline/bindings/zsh/powerline.zsh ]]; then
-    source /usr/lib/python3.4/site-packages/powerline/bindings/zsh/powerline.zsh
-fi
+# source /usr/share/zsh/site-contrib/powerline.zsh
 
 # Source fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -24,6 +18,9 @@ source $HOME/.dynamic-colors/completions/dynamic-colors.zsh
 prompt minimal
 export VISUAL=vim
 export EDITOR="$vim"
+
+# export local binaries (pip, etc)
+export PATH=$PATH:$HOME/.local/bin
 
 # export personal scripts (lock, ptpbw, etc)
 export PATH=$PATH:$HOME/.scripts
@@ -81,10 +78,11 @@ alias startx='startx -- -keeptty -nolisten tcp >| $HOME/.xorg.log 2>&1'
 alias ez='vim ~/.zshrc' # change this file
 alias rz='source ~/.zshrc' # shell reload after configuration changes
 alias ex='vim ~/.Xresources' # edit x stuff
-alias rx='xrdb ~/.Xresources' # reload x stuff
+alias rx='xrdb -merge ~/.Xresources' # reload x stuff
 alias ea='vim ~/.config/awesome/rc.lua' # edit awesome
-alias et='vim ~/.config/awesome/themes/personal/theme.lua' # edit awesome theme
 alias ev='vim ~/.vimrc' # edit vim
+
+alias fuzzy='find . -type f | fzf'
 
 alias google-chrome='google-chrome-stable'
 alias chrome='google-chrome'
@@ -96,5 +94,9 @@ alias seungyeon='neofetch --w3m /home/zhang/Dropbox/Linux/neofetch.png --size 21
 neofetch
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads onvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Source local dotfiles last for any system-specific scripts
+HOSTNAME=$(hostname)
+source "$HOME/.$HOSTNAME"
