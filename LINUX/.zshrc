@@ -34,7 +34,6 @@ export PATH=$PATH:$HOME/.npm/bin
 # export dynamic colors, color scripts, etc
 export PATH=$PATH:$HOME/.dynamic-colors/bin
 export PATH=$PATH:$HOME/.color-scripts/color-scripts
-export PATH=$PATH:.
 
 # colored less output
 export LESS=-R
@@ -95,3 +94,7 @@ alias alsi='alsi -a'
 alias neofetch='neofetch --size 214px --gtk2 off --gtk3 off --block_range 0 16 --colors 4 7 4 4 4 7 --ascii_colors 4 4 4 4 4 4'
 alias seungyeon='neofetch --w3m /home/zhang/Dropbox/Linux/neofetch.png --size 214px'
 neofetch
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
